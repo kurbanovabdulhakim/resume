@@ -117,7 +117,7 @@ resume/
 - Consumes: Environment variables, filesystem paths.
 - Produces: `config.Config` object (paths, exit codes, defaults), `logger.log_event()` structured logger.
 
-- [ ] **Step 1: Write the failing test for configuration and paths**
+- [x] **Step 1: Write the failing test for configuration and paths**
   ```python
   # tests/test_config.py
   import unittest
@@ -131,16 +131,16 @@ resume/
           self.assertEqual(Config.EXIT_ERROR, 1)
           self.assertEqual(Config.EXIT_NO_DATA, 2)
   ```
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
   `python -m unittest tests/test_config.py`
-- [ ] **Step 3: Implement `resume/.gitignore`, `scripts/config.py`, `scripts/logger.py`, and `requirements.txt`**
+- [x] **Step 3: Implement `resume/.gitignore`, `scripts/config.py`, `scripts/logger.py`, and `requirements.txt`**
   - Configure `.gitignore` to ignore `generated/*`, `.venv`, `__pycache__`, `*.pyc`, `.DS_Store`, but explicitly ensure `!db/positions.db` is tracked.
   - Implement `scripts/config.py` with cross-platform `pathlib.Path` resolution, fallback detection for `HERMES_BATCH_QUEUE.json`, Edge path, and standard exit codes.
   - Implement `scripts/logger.py` writing append-only JSON lines to `logs/YYYY-MM-DD.jsonl`.
   - Create directories: `db/`, `master/`, `variants/`, `cover_letters/`, `generated/`, `logs/`, `scripts/portals/`, `tests/`.
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
   `python -m unittest tests/test_config.py`
-- [ ] **Step 5: Commit task deliverable**
+- [x] **Step 5: Commit task deliverable**
   `git add .gitignore requirements.txt scripts/config.py scripts/logger.py tests/test_config.py && git commit -m "chore: setup repo layout, config, logger and gitignore"`
 
 ---
@@ -157,7 +157,7 @@ resume/
 - Consumes: `schema.sql`, `config.Config.DB_PATH`.
 - Produces: Fully initialized SQLite database at `db/positions.db` with tables `vacancies`, `applications`, `documents`, and performance indexes.
 
-- [ ] **Step 1: Write the failing test for DB initialization and constraints**
+- [x] **Step 1: Write the failing test for DB initialization and constraints**
   ```python
   # tests/test_db.py
   import unittest
@@ -181,16 +181,16 @@ resume/
           finally:
               if test_db.exists(): test_db.unlink()
   ```
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
   `python -m unittest tests/test_db.py`
-- [ ] **Step 3: Implement `db/schema.sql`, `db/schema.md`, and `scripts/init_db.py`**
+- [x] **Step 3: Implement `db/schema.sql`, `db/schema.md`, and `scripts/init_db.py`**
   - `schema.sql`: define `vacancies`, `applications`, and `documents` schemas with foreign keys, checks on status enum, and indexes on `tier`, `sector`, `status`.
   - `scripts/init_db.py`: CLI with `--db-path`, `--json`, `--help` flags; executes `schema.sql` idempotently (`CREATE TABLE IF NOT EXISTS`, `CREATE INDEX IF NOT EXISTS`).
   - Initialize active database `resume/db/positions.db`.
   - `db/schema.md`: English documentation with frontmatter, data dictionary, and example SQL queries for AI agents.
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
   `python -m unittest tests/test_db.py`
-- [ ] **Step 5: Commit task deliverable**
+- [x] **Step 5: Commit task deliverable**
   `git add db/schema.sql db/schema.md db/positions.db scripts/init_db.py tests/test_db.py && git commit -m "feat(db): canonical sqlite schema and idempotent init_db CLI"`
 
 ---
@@ -205,7 +205,7 @@ resume/
 - Consumes: `HERMES_BATCH_QUEUE.json` (from `mywork` or CLI parameter `--queue-file`), `positions.db`.
 - Produces: Upserted vacancy rows in `vacancies`, synced application records in `applications`, structured JSON report.
 
-- [ ] **Step 1: Write the failing test for Hermes sync**
+- [x] **Step 1: Write the failing test for Hermes sync**
   ```python
   # tests/test_sync_hermes.py
   import unittest
@@ -217,19 +217,19 @@ resume/
           # verify sample batch items are loaded into vacancies and applications table
           pass
   ```
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
   `python -m unittest tests/test_sync_hermes.py`
-- [ ] **Step 3: Implement `scripts/sync_hermes.py`**
+- [x] **Step 3: Implement `scripts/sync_hermes.py`**
   - Parse `HERMES_BATCH_QUEUE.json` (1,500+ vacancies across batches).
   - Map fields: `id`, `title`, `company`, `url`, `salary`, `tier`, `category` -> `sector` (normalized to Finance / Logistics / Analytics / Management), `source='hh.uz'`.
   - Application mapping: if `applied_count > 0` or vacancy has application flag, record status as `applied` with `pdf_sent_in_chat` status.
   - Idempotent upsert logic using `INSERT ... ON CONFLICT(id) DO UPDATE`.
   - Support CLI arguments: `--queue-file`, `--dry-run`, `--limit`, `--json`, `--help`.
-- [ ] **Step 4: Run test and verify live sync from `mywork`**
+- [x] **Step 4: Run test and verify live sync from `mywork`**
   - Run unit tests: `python -m unittest tests/test_sync_hermes.py`.
   - Execute sync CLI: `python scripts/sync_hermes.py --json`.
   - Verify records inserted into `db/positions.db`.
-- [ ] **Step 5: Commit task deliverable**
+- [x] **Step 5: Commit task deliverable**
   `git add scripts/sync_hermes.py db/positions.db tests/test_sync_hermes.py && git commit -m "feat(sync): idempotent Hermes batch queue sync script with json output"`
 
 ---
@@ -245,7 +245,7 @@ resume/
 - Consumes: CLI options (`--url`, `--company`, `--title`, `--status`, `--notes`), `positions.db`.
 - Produces: Inserted/updated database rows, JSON response with updated entity details.
 
-- [ ] **Step 1: Write the failing test for add_position and update_status**
+- [x] **Step 1: Write the failing test for add_position and update_status**
   ```python
   # tests/test_position_crud.py
   import unittest
@@ -256,15 +256,15 @@ resume/
       def test_add_and_update_lifecycle(self):
           pass
   ```
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
   `python -m unittest tests/test_position_crud.py`
-- [ ] **Step 3: Implement `scripts/add_position.py` and `scripts/update_status.py`**
+- [x] **Step 3: Implement `scripts/add_position.py` and `scripts/update_status.py`**
   - `add_position.py`: CLI accepting `--title`, `--company`, `--url`, `--source` (default `manual`), `--sector`, `--tier` (default 2), `--salary-text`, `--notes`, `--json`.
   - `update_status.py`: CLI accepting `--vacancy-id`, `--status` (`applied`, `viewed`, `invited`, `interview`, `offer`, `rejected`, `declined`), `--notes`, `--cv-variant`, `--json`.
   - Include validation for allowed status values and ISO 8601 timestamps for `last_updated`.
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
   `python -m unittest tests/test_position_crud.py`
-- [ ] **Step 5: Commit task deliverable**
+- [x] **Step 5: Commit task deliverable**
   `git add scripts/add_position.py scripts/update_status.py tests/test_position_crud.py && git commit -m "feat(cli): add_position and update_status CLI tools"`
 
 ---
@@ -288,7 +288,7 @@ resume/
 - Consumes: Candidate profile data from `MY-WORK` and Desktop.
 - Produces: Standardized markdown templates with validated `{{placeholder}}` markers for automated substitution.
 
-- [ ] **Step 1: Write the failing test for template consistency and placeholder validation**
+- [x] **Step 1: Write the failing test for template consistency and placeholder validation**
   ```python
   # tests/test_templates.py
   import unittest
@@ -300,15 +300,15 @@ resume/
           # check all files under cover_letters/
           pass
   ```
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
   `python -m unittest tests/test_templates.py`
-- [ ] **Step 3: Implement master resume, variants, and sector cover letter templates**
+- [x] **Step 3: Implement master resume, variants, and sector cover letter templates**
   - Sourced from Abdulkhakim's profile: Senior Business Analyst / Financial Analyst / Operations.
   - Document all placeholders in `cover_letters/_template_base.md` (`{{company}}`, `{{position}}`, `{{sector_hook}}`, `{{key_achievement}}`, `{{salary_expectation}}`, `{{candidate_name}}`, `{{candidate_phone}}`, `{{candidate_email}}`, `{{date}}`).
   - Create sector templates for Banking/Finance, Logistics/Aviation, FMCG/Distribution, IT/Analytics.
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
   `python -m unittest tests/test_templates.py`
-- [ ] **Step 5: Commit task deliverable**
+- [x] **Step 5: Commit task deliverable**
   `git add master/ variants/ cover_letters/ tests/test_templates.py && git commit -m "feat(templates): master resume, role variants, and sector cover letters"`
 
 ---
@@ -323,7 +323,7 @@ resume/
 - Consumes: `vacancy_id` from `positions.db`, templates from `cover_letters/` and `variants/`.
 - Produces: Rendered documents in `generated/<company_slug>_<vacancy_id>/` (`cover_letter.md`, `cover_letter.pdf`, `cv_tailored.md`, `cv_tailored.pdf`), database record in `documents` table.
 
-- [ ] **Step 1: Write the failing test for document generation**
+- [x] **Step 1: Write the failing test for document generation**
   ```python
   # tests/test_generate_docs.py
   import unittest
@@ -333,18 +333,18 @@ resume/
       def test_generates_markdown_and_records_in_db(self):
           pass
   ```
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
   `python -m unittest tests/test_generate_docs.py`
-- [ ] **Step 3: Implement `scripts/generate_docs.py`**
+- [x] **Step 3: Implement `scripts/generate_docs.py`**
   - Read vacancy metadata (`company`, `title`, `sector`, `tier`) from `positions.db`.
   - Resolve appropriate sector template and role variant.
   - Render placeholders into target markdown files.
   - Generate clean HTML/PDF export into `generated/<company_slug>_<vacancy_id>/` (using headless Edge or ReportLab).
   - Register generated files in `documents` table.
   - Support CLI arguments: `--vacancy-id`, `--format` (`md`, `html`, `pdf`), `--variant`, `--dry-run`, `--json`, `--help`.
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
   `python -m unittest tests/test_generate_docs.py`
-- [ ] **Step 5: Commit task deliverable**
+- [x] **Step 5: Commit task deliverable**
   `git add scripts/generate_docs.py tests/test_generate_docs.py && git commit -m "feat(generator): automated cover letter and CV generation engine"`
 
 ---
@@ -362,7 +362,7 @@ resume/
 - Consumes: Data in `positions.db` (`vacancies`, `applications`, `documents`).
 - Produces: Updated `dashboard.html`, `PIPELINE.md`, and `AI_CONTEXT.md`.
 
-- [ ] **Step 1: Write the failing test for dashboard generation**
+- [x] **Step 1: Write the failing test for dashboard generation**
   ```python
   # tests/test_dashboard.py
   import unittest
@@ -372,17 +372,17 @@ resume/
       def test_generates_all_three_artifacts(self):
           pass
   ```
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
   `python -m unittest tests/test_dashboard.py`
-- [ ] **Step 3: Implement `scripts/dashboard.py`**
+- [x] **Step 3: Implement `scripts/dashboard.py`**
   - Query DB for aggregation: status breakdown (`applied`, `viewed`, `invited`, `interview`, `offer`, `rejected`), tier breakdown, recent applications.
   - Build `dashboard.html`: standalone responsive HTML Kanban board with search and filter.
   - Build `PIPELINE.md`: Markdown summary table with full YAML frontmatter complying with `doc-standarts-draft.md`.
   - Build `AI_CONTEXT.md`: Machine-readable YAML/Markdown context file containing total counts, active batch info, next actions, and query hints for AI agents.
   - Support CLI flags: `--json`, `--output-dir`, `--help`.
-- [ ] **Step 4: Run test to verify it passes and inspect generated artifacts**
+- [x] **Step 4: Run test to verify it passes and inspect generated artifacts**
   `python -m unittest tests/test_dashboard.py`
-- [ ] **Step 5: Commit task deliverable**
+- [x] **Step 5: Commit task deliverable**
   `git add scripts/dashboard.py dashboard.html PIPELINE.md AI_CONTEXT.md tests/test_dashboard.py && git commit -m "feat(dashboard): visual kanban, PIPELINE.md and AI_CONTEXT.md generator"`
 
 ---
@@ -399,7 +399,7 @@ resume/
 - Consumes: Web responses from hh.uz and OLX UZ.
 - Produces: Standardized vacancy dictionaries for ingestion into `positions.db`.
 
-- [ ] **Step 1: Write the failing test for portal parsers**
+- [x] **Step 1: Write the failing test for portal parsers**
   ```python
   # tests/test_portals.py
   import unittest
@@ -409,15 +409,15 @@ resume/
       def test_parse_olx_sample_html(self):
           pass
   ```
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
   `python -m unittest tests/test_portals.py`
-- [ ] **Step 3: Implement portal scrapers and document portal policy**
+- [x] **Step 3: Implement portal scrapers and document portal policy**
   - `scripts/portals/README.md`: Document portal statuses. Explicitly document that **Telegram channels are deferred to a future phase (`not yet telegram channels`)** and define the future intake interface.
   - `scripts/portals/hh_watcher.py`: Syncs new postings found on hh.uz into `positions.db`.
   - `scripts/portals/olx_scraper.py`: Scrapes OLX Uzbekistan job listings and normalizes them into the standard vacancy schema.
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
   `python -m unittest tests/test_portals.py`
-- [ ] **Step 5: Commit task deliverable**
+- [x] **Step 5: Commit task deliverable**
   `git add scripts/portals/ tests/test_portals.py && git commit -m "feat(portals): hh watcher, olx scraper, and telegram roadmap documentation"`
 
 ---
@@ -434,7 +434,7 @@ resume/
 - Consumes: All repository tools, schema, and documentation.
 - Produces: Single entry point for any AI agent to inspect, navigate, and execute any job tracking workflow.
 
-- [ ] **Step 1: Write an end-to-end integration test simulating an AI agent lifecycle**
+- [x] **Step 1: Write an end-to-end integration test simulating an AI agent lifecycle**
   ```python
   # tests/test_ai_first_pipeline.py
   import unittest
@@ -451,9 +451,9 @@ resume/
           # 5. Refresh dashboard & AI context via CLI
           pass
   ```
-- [ ] **Step 2: Run test to verify full end-to-end flow**
+- [x] **Step 2: Run test to verify full end-to-end flow**
   `python -m unittest tests/test_ai_first_pipeline.py`
-- [ ] **Step 3: Author comprehensive AI-First documentation with mandatory YAML frontmatter**
+- [x] **Step 3: Author comprehensive AI-First documentation with mandatory YAML frontmatter**
   - `AGENTS.md`: Cold-start guide for AI agents. Contains:
     - 1-paragraph purpose.
     - Architecture and file map.
@@ -462,9 +462,9 @@ resume/
     - Rules: no hardcoded secrets, no direct writes to tracked DB without CLI validation, gitignore rules for `generated/`.
   - `README.md`: Master human and agent navigation index complying with `doc-standarts-draft.md`.
   - `scripts/README.md`: Detailed CLI reference documentation for every script.
-- [ ] **Step 4: Run complete repository test suite**
+- [x] **Step 4: Run complete repository test suite**
   `python -m unittest discover tests`
-- [ ] **Step 5: Commit task deliverable and final documentation**
+- [x] **Step 5: Commit task deliverable and final documentation**
   `git add AGENTS.md README.md scripts/README.md tests/test_ai_first_pipeline.py && git commit -m "docs(ai-first): AGENTS.md, master README and end-to-end AI agent test suite"`
 
 ---
