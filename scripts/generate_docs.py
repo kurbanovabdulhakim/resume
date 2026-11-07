@@ -28,10 +28,22 @@ from scripts.init_db import get_connection, init_database
 from scripts.logger import log_event
 
 
+CYR_TO_LAT = {
+    'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'e',
+    'ж': 'zh', 'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm',
+    'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
+    'ф': 'f', 'х': 'kh', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'shch',
+    'ъ': '', 'ы': 'y', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya'
+}
+
+
 def slugify(text: str) -> str:
-    """Converts string into a safe filesystem slug."""
-    text = re.sub(r"[^\w\s-]", "", text, flags=re.UNICODE).strip().lower()
-    return re.sub(r"[-\s]+", "_", text)[:40] or "company"
+    """Converts string into a clean ASCII filesystem slug with Cyrillic transliteration."""
+    text_lower = text.lower()
+    transliterated = "".join(CYR_TO_LAT.get(c, c) for c in text_lower)
+    cleaned = re.sub(r"[^a-z0-9\s_-]", "", transliterated).strip()
+    slug = re.sub(r"[-\s]+", "_", cleaned)[:40]
+    return slug or "company"
 
 
 def strip_yaml_frontmatter(content: str) -> str:

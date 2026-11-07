@@ -17,38 +17,41 @@ related:
 
 ```yaml
 {
-  "generated_at": "2026-11-08T00:20:35.200332",
+  "generated_at": "2026-11-08T00:26:03.850713",
   "database": "db/positions.db",
-  "vacancies_total": 1,
-  "active_vacancies": 1,
-  "total_vacancies": 1,
-  "applications_total": 1,
-  "total_applications": 1,
+  "vacancies_total": 1533,
+  "active_vacancies": 1533,
+  "total_vacancies": 1533,
+  "applications_total": 107,
+  "total_applications": 107,
   "statuses": {
-    "applied": 0,
+    "applied": 106,
     "viewed": 0,
-    "invited": 1,
-    "interview": 0,
+    "invited": 0,
+    "interview": 1,
     "offer": 0,
     "rejected": 0,
     "declined": 0
   },
   "tier_distribution": {
-    "1": 1,
-    "2": 0,
-    "3": 0
+    "1": 93,
+    "2": 160,
+    "3": 1280
   },
   "sector_distribution": {
-    "Finance": 1
+    "Analytics": 103,
+    "Finance": 312,
+    "Logistics": 235,
+    "Management": 883
   },
   "urgent_leads_count": 1,
   "urgent_leads": [
     {
-      "id": "888777",
-      "company": "Apex Insurance",
-      "title": "Lead Financial Controller",
-      "status": "invited",
-      "notes": "Direct outreach from partner\n[2026-11-08T00:20:35.023084] Interview scheduled with Head of Finance"
+      "id": "137871661",
+      "company": "АО OPEN BANK AJ",
+      "title": "Аналитик данных (Data Analyst) в банк / финтех",
+      "status": "interview",
+      "notes": "Imported via Hermes Batch Queue [Hermes sync]\n[2026-11-08T00:25:56.940584] Приглашение на 1-й раунд: техническое интервью с Lead Analyst (Четверг 15:00)"
     }
   ],
   "recommended_next_actions": [
