@@ -1,0 +1,6 @@
+# Minimal dependencies (Stdlib-first architecture)
+# Core operations use python stdlib: sqlite3, pathlib, json, argparse, re, datetime
+
+# Optional HTTP / PDF extras if headless browser is unavailable:
+requests>=2.31.0
+reportlab>=4.0.0
