@@ -2,7 +2,7 @@
 Pipeline Dashboard & AI Context Generator.
 
 Compiles current state from positions.db into:
-1. dashboard.html — Interactive standalone visual Kanban board
+1. dashboard.html — Interactive standalone visual Kanban board & Table CRM
 2. PIPELINE.md — Human-readable Markdown summary table
 3. AI_CONTEXT.md — Machine-readable state for cold-starting AI agents
 
@@ -13,6 +13,7 @@ Usage:
 from __future__ import annotations
 import argparse
 import datetime
+import html
 import json
 import sys
 from pathlib import Path
@@ -59,7 +60,7 @@ def fetch_pipeline_metrics(db_path: Path) -> Dict[str, Any]:
     # Applications list with details
     apps_query = """
         SELECT a.id, a.vacancy_id, v.title, v.company, v.tier, v.sector, v.url, 
-               a.status, a.applied_at, a.last_updated, a.notes
+               a.status, a.applied_at, a.last_updated, a.notes, v.salary_text
         FROM applications a
         JOIN vacancies v ON a.vacancy_id = v.id
         ORDER BY 
@@ -89,6 +90,7 @@ def fetch_pipeline_metrics(db_path: Path) -> Dict[str, Any]:
             "applied_at": r[8],
             "last_updated": r[9],
             "notes": r[10] or "",
+            "salary_text": r[11] or "",
         })
 
     # Urgent leads (invited or interview)
@@ -111,7 +113,7 @@ def fetch_pipeline_metrics(db_path: Path) -> Dict[str, Any]:
 
 
 def generate_kanban_html(data: Dict[str, Any], output_path: Path) -> None:
-    """Renders standalone responsive HTML Kanban dashboard."""
+    """Renders executive-grade responsive HTML Kanban dashboard & Table view."""
     statuses = ["applied", "viewed", "invited", "interview", "offer", "rejected"]
     now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -127,32 +129,57 @@ def generate_kanban_html(data: Dict[str, Any], output_path: Path) -> None:
     columns_html = []
     status_titles = {
         "applied": "📨 Отправлен отклик",
-        "viewed": "👀 Просмотрено",
+        "viewed": "👀 Просмотрено HR",
         "invited": "⭐ Приглашение",
         "interview": "🎙️ Собеседование",
         "offer": "🎉 Оффер",
         "rejected": "❌ Отказ",
     }
 
+    # Build Kanban cards
     for s in statuses:
         items = grouped[s]
         cards_html = []
-        for it in items[:60]:  # limit per column to keep HTML snappy
-            tier_badge = f'<span class="badge tier-{it["tier"]}">Tier {it["tier"]}</span>'
-            sector_badge = f'<span class="badge sector">{it["sector"]}</span>'
-            notes_div = f'<div class="card-notes">{it["notes"]}</div>' if it["notes"] else ''
-            link_a = f'<a href="{it["url"]}" target="_blank" class="card-link">HH ↗</a>' if it["url"] else ''
+        for it in items:
+            t = it["tier"]
+            tier_class = f"badge-t{t}"
+            tier_label = f"Tier {t}" if t != 1 else "⭐ Tier 1"
+
+            sector_badge = f'<span class="badge-sector">{html.escape(it["sector"])}</span>'
+            salary_badge = (
+                f'<span class="badge-salary">{html.escape(it["salary_text"])}</span>'
+                if it["salary_text"]
+                else ""
+            )
+            notes_div = (
+                f'<div class="card-notes">{html.escape(it["notes"])}</div>'
+                if it["notes"]
+                else ""
+            )
+            link_a = (
+                f'<a href="{it["url"]}" target="_blank" class="card-link">HH ↗</a>'
+                if it["url"]
+                else ""
+            )
+
+            search_blob = f"{it['company']} {it['title']} {it['sector']} {it['notes']}".lower()
+
             card = f"""
-            <div class="card status-{it["status"]}" data-status="{it["status"]}">
+            <div class="card status-{it['status']}" 
+                 data-status="{it['status']}" 
+                 data-tier="{t}" 
+                 data-sector="{html.escape(it['sector'])}"
+                 data-search="{html.escape(search_blob)}">
               <div class="card-header">
-                {tier_badge}
+                <span class="{tier_class}">{tier_label}</span>
                 {sector_badge}
+                {salary_badge}
               </div>
-              <div class="card-title">{it["title"]}</div>
-              <div class="card-company">{it["company"]}</div>
+              <div class="card-title">{html.escape(it['title'])}</div>
+              <div class="card-company">{html.escape(it['company'])}</div>
               {notes_div}
               <div class="card-footer">
-                <span class="card-date">{str(it["last_updated"])[:10]}</span>
+                <span class="card-date">🕒 {str(it['last_updated'])[:10]}</span>
                 {link_a}
               </div>
             </div>"""
@@ -165,47 +192,236 @@ def generate_kanban_html(data: Dict[str, Any], output_path: Path) -> None:
             <span class="col-count">{len(items)}</span>
           </div>
           <div class="cards-container">
-            {''.join(cards_html) if cards_html else '<div class="empty-col">Нет вакансий</div>'}
+            {''.join(cards_html) if cards_html else '<div class="empty-col">Нет вакансий в этом статусе</div>'}
           </div>
         </div>"""
         columns_html.append(col_html)
 
-    html = f"""<!DOCTYPE html>
+    # Build Table rows
+    table_rows = []
+    for idx, it in enumerate(data["applications"], 1):
+        t = it["tier"]
+        tier_badge = f'<span class="badge-t{t}">Tier {t}</span>'
+        status_label = status_titles.get(it["status"], it["status"])
+        status_badge = f'<span class="badge-status badge-status-{it["status"]}">{status_label}</span>'
+        salary_str = html.escape(it["salary_text"]) if it["salary_text"] else '<span class="text-muted">—</span>'
+        search_blob = f"{it['company']} {it['title']} {it['sector']} {it['notes']}".lower()
+
+        row = f"""
+        <tr class="table-row status-{it['status']}" 
+            data-status="{it['status']}" 
+            data-tier="{t}" 
+            data-sector="{html.escape(it['sector'])}"
+            data-search="{html.escape(search_blob)}">
+          <td style="color: var(--text-sub);">{idx}</td>
+          <td><strong>{html.escape(it['company'])}</strong></td>
+          <td>
+            <a href="{it['url']}" target="_blank" class="vac-link">{html.escape(it['title'])}</a>
+            {f'<div class="snippet-sub">{html.escape(it["notes"])}</div>' if it["notes"] else ''}
+          </td>
+          <td>{tier_badge}</td>
+          <td><span class="badge-sector">{html.escape(it['sector'])}</span></td>
+          <td>{salary_str}</td>
+          <td>{status_badge}</td>
+          <td style="white-space: nowrap; color: var(--text-sub);">{str(it['last_updated'])[:10]}</td>
+          <td>
+            <a href="{it['url']}" target="_blank" class="action-btn">HH ↗</a>
+          </td>
+        </tr>"""
+        table_rows.append(row)
+
+    urgent_count = data["status_counts"].get("invited", 0) + data["status_counts"].get("interview", 0)
+
+    html_page = f"""<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Hermes Job Pipeline Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚡ Hermes 2.0 • Executive Recruitment Command Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    :root {{
+      --bg: #0b0f19;
+      --surface: #131b2e;
+      --surface-hover: #1c2742;
+      --border: #233152;
+      --text-main: #f1f5f9;
+      --text-sub: #94a3b8;
+      --primary: #3b82f6;
+      --success: #10b981;
+      --danger: #ef4444;
+      --gold: #f59e0b;
+      --purple: #8b5cf6;
+      --cyan: #06b6d4;
+    }}
     * {{ box-sizing: border-box; margin: 0; padding: 0; }}
     body {{
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #0f172a;
-      color: #f8fafc;
-      padding: 20px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding: 24px;
     }}
+
+    /* HEADER */
     .header {{
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #1e293b;
-      padding: 16px 24px;
-      border-radius: 12px;
-      border: 1px solid #334155;
-      margin-bottom: 20px;
-    }}
-    .header h1 {{ font-size: 20px; font-weight: 700; color: #38bdf8; }}
-    .stats-bar {{
-      display: flex;
+      flex-wrap: wrap;
       gap: 16px;
+    }}
+    .header-titles h1 {{
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }}
+    .header-titles p {{
+      color: var(--text-sub);
       font-size: 13px;
     }}
-    .stat-pill {{
-      background: #0f172a;
-      border: 1px solid #334155;
-      padding: 6px 12px;
-      border-radius: 8px;
+    .live-badge {{
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }}
-    .stat-pill strong {{ color: #38bdf8; }}
+    .live-dot {{
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
+    }}
+
+    /* KPI GRID */
+    .kpi-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }}
+    .kpi-card {{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }}
+    .kpi-card::before {{
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+    }}
+    .kpi-total::before {{ background: var(--primary); }}
+    .kpi-purple::before {{ background: var(--purple); }}
+    .kpi-gold::before {{ background: var(--gold); }}
+    .kpi-cyan::before {{ background: var(--cyan); }}
+    .kpi-green::before {{ background: var(--success); }}
+    .kpi-num {{ font-size: 26px; font-weight: 800; margin-bottom: 4px; }}
+    .kpi-label {{ color: var(--text-sub); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }}
+
+    /* CONTROLS BAR */
+    .controls-bar {{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }}
+    .controls-top {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }}
+    .tabs-group {{
+      display: flex;
+      gap: 8px;
+    }}
+    .tab-btn {{
+      background: #17223b;
+      border: 1px solid var(--border);
+      color: var(--text-sub);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }}
+    .tab-btn.active {{
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    }}
+    .search-box {{
+      flex: 1;
+      min-width: 280px;
+      padding: 10px 16px;
+      background: #0b0f19;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: white;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+    }}
+    .search-box:focus {{ border-color: var(--primary); }}
+
+    .filters-group {{
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }}
+    .filter-label {{
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-right: 4px;
+      font-weight: 600;
+    }}
+    .pill-btn {{
+      background: #0f172a;
+      border: 1px solid var(--border);
+      color: var(--text-sub);
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }}
+    .pill-btn:hover {{ border-color: var(--primary); color: white; }}
+    .pill-btn.active {{
+      background: #1e3a8a;
+      border-color: #3b82f6;
+      color: #93c5fd;
+    }}
+
+    /* KANBAN BOARD */
     .kanban-board {{
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -214,66 +430,84 @@ def generate_kanban_html(data: Dict[str, Any], output_path: Path) -> None:
       padding-bottom: 20px;
     }}
     .kanban-col {{
-      background: #1e293b;
+      background: var(--surface);
       border-radius: 12px;
-      border: 1px solid #334155;
+      border: 1px solid var(--border);
       display: flex;
       flex-direction: column;
-      max-height: calc(100vh - 120px);
+      max-height: calc(100vh - 280px);
+      min-width: 250px;
     }}
     .col-header {{
       padding: 12px 14px;
-      border-bottom: 1px solid #334155;
+      border-bottom: 1px solid var(--border);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: #162035;
+      border-top-left-radius: 11px;
+      border-top-right-radius: 11px;
     }}
-    .col-header h3 {{ font-size: 14px; font-weight: 600; color: #f1f5f9; }}
+    .col-header h3 {{ font-size: 13px; font-weight: 700; color: #f1f5f9; }}
     .col-count {{
-      background: #334155;
+      background: #233152;
       color: #38bdf8;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       padding: 2px 8px;
-      border-radius: 12px;
+      border-radius: 10px;
     }}
     .cards-container {{
-      padding: 12px;
+      padding: 10px;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }}
+
+    /* CARDS */
     .card {{
-      background: #0f172a;
-      border: 1px solid #334155;
-      border-radius: 8px;
-      padding: 10px;
-      transition: border-color 0.15s ease;
+      background: #0b0f19;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      transition: all 0.2s ease;
+      position: relative;
     }}
-    .card:hover {{ border-color: #38bdf8; }}
-    .card-header {{ display: flex; gap: 6px; margin-bottom: 6px; }}
-    .badge {{
-      font-size: 10px;
+    .card:hover {{
+      border-color: #3b82f6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    }}
+    .card-header {{
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }}
+    .card-title {{
+      font-size: 13px;
       font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 4px;
-      text-transform: uppercase;
+      color: #f8fafc;
+      margin-bottom: 4px;
+      line-height: 1.35;
     }}
-    .tier-1 {{ background: #854d0e; color: #fef08a; }}
-    .tier-2 {{ background: #1e3a8a; color: #bfdbfe; }}
-    .tier-3 {{ background: #374151; color: #e5e7eb; }}
-    .sector {{ background: #134e4a; color: #99f6e4; }}
-    .card-title {{ font-size: 13px; font-weight: 600; color: #f8fafc; margin-bottom: 2px; }}
-    .card-company {{ font-size: 12px; color: #94a3b8; margin-bottom: 6px; }}
+    .card-company {{
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }}
     .card-notes {{
       font-size: 11px;
-      background: #1e293b;
-      padding: 4px 6px;
-      border-radius: 4px;
+      background: #131b2e;
+      border: 1px solid #1e293b;
+      padding: 6px 8px;
+      border-radius: 6px;
       color: #cbd5e1;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       white-space: pre-wrap;
+      line-height: 1.4;
     }}
     .card-footer {{
       display: flex;
@@ -281,36 +515,296 @@ def generate_kanban_html(data: Dict[str, Any], output_path: Path) -> None:
       align-items: center;
       font-size: 11px;
       color: #64748b;
+      border-top: 1px solid #1a233a;
+      padding-top: 8px;
     }}
     .card-link {{
-      color: #38bdf8;
+      color: #60a5fa;
       text-decoration: none;
+      font-weight: 700;
+      background: #17223b;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid #233152;
+    }}
+    .card-link:hover {{
+      background: #2563eb;
+      color: white;
+      border-color: #3b82f6;
+    }}
+
+    /* BADGES */
+    .badge-t1 {{
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+    }}
+    .badge-t2 {{
+      background: rgba(59, 130, 246, 0.2);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 10px;
+      text-transform: uppercase;
+    }}
+    .badge-t3 {{
+      background: rgba(148, 163, 184, 0.15);
+      color: #cbd5e1;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 10px;
+    }}
+    .badge-sector {{
+      background: rgba(6, 182, 212, 0.15);
+      color: #67e8f9;
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 10px;
       font-weight: 600;
     }}
-    .card-link:hover {{ text-decoration: underline; }}
-    .empty-col {{ font-size: 12px; color: #64748b; text-align: center; padding: 20px 0; }}
+    .badge-salary {{
+      background: rgba(16, 185, 129, 0.15);
+      color: #6ee7b7;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+    }}
+
+    .empty-col {{
+      font-size: 12px;
+      color: #475569;
+      text-align: center;
+      padding: 30px 10px;
+    }}
+
+    /* TABLE VIEW */
+    .table-view-container {{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow-x: auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      display: none;
+    }}
+    table {{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: left;
+    }}
+    th {{
+      background: #17223b;
+      color: var(--text-sub);
+      font-weight: 700;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }}
+    td {{
+      padding: 12px 16px;
+      border-bottom: 1px solid #1a2540;
+      vertical-align: middle;
+    }}
+    tr:hover {{ background: var(--surface-hover); }}
+    .vac-link {{ color: #60a5fa; text-decoration: none; font-weight: 600; }}
+    .vac-link:hover {{ text-decoration: underline; color: #93c5fd; }}
+    .snippet-sub {{ font-size: 11px; color: var(--text-sub); margin-top: 4px; line-height: 1.3; }}
+    .action-btn {{
+      color: #38bdf8;
+      background: #17223b;
+      border: 1px solid #233152;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 11px;
+    }}
+    .action-btn:hover {{ background: #2563eb; color: white; }}
+    .badge-status {{
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }}
+    .badge-status-applied {{ background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid #2563eb; }}
+    .badge-status-interview {{ background: rgba(245, 158, 11, 0.25); color: #fbbf24; border: 1px solid #f59e0b; }}
+    .badge-status-invited {{ background: rgba(139, 92, 246, 0.25); color: #c084fc; border: 1px solid #8b5cf6; }}
+    .badge-status-offer {{ background: rgba(16, 185, 129, 0.25); color: #34d399; border: 1px solid #10b981; }}
+    .badge-status-rejected {{ background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #dc2626; }}
   </style>
 </head>
 <body>
   <div class="header">
-    <div>
-      <h1>⚡ Hermes Job Application Pipeline</h1>
-      <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Обновлено: {now_str} | Single Source of Truth: db/positions.db</div>
+    <div class="header-titles">
+      <h1>⚡ Hermes 2.0 • Executive Recruitment Command Hub</h1>
+      <p>Ташкент & Узбекистан • База данных: <code>db/positions.db</code> • Автоматическая синхронизация с HeadHunter</p>
     </div>
-    <div class="stats-bar">
-      <div class="stat-pill">Целевых вакансий: <strong>{data['total_vacancies']}</strong></div>
-      <div class="stat-pill">Откликов: <strong>{data['total_applications']}</strong></div>
-      <div class="stat-pill">Приглашений / Интервью: <strong>{data['status_counts'].get('invited', 0) + data['status_counts'].get('interview', 0)}</strong></div>
-      <div class="stat-pill">Офферов: <strong>{data['status_counts'].get('offer', 0)}</strong></div>
+    <div class="live-badge">
+      <div class="live-dot"></div>
+      <span>Синхронизировано: {now_str}</span>
     </div>
   </div>
 
-  <div class="kanban-board">
+  <div class="kpi-grid">
+    <div class="kpi-card kpi-total">
+      <div class="kpi-num">{data['total_vacancies']}</div>
+      <div class="kpi-label">Целевых вакансий в базе</div>
+    </div>
+    <div class="kpi-card kpi-purple">
+      <div class="kpi-num">{data['total_applications']}</div>
+      <div class="kpi-label">Откликов направлено</div>
+    </div>
+    <div class="kpi-card kpi-gold">
+      <div class="kpi-num">{urgent_count}</div>
+      <div class="kpi-label">Интервью & Приглашения</div>
+    </div>
+    <div class="kpi-card kpi-cyan">
+      <div class="kpi-num">{data['tier_counts'].get(1, 0)}</div>
+      <div class="kpi-label">Tier 1 Корпорации & Банки</div>
+    </div>
+    <div class="kpi-card kpi-green">
+      <div class="kpi-num">{data['status_counts'].get('offer', 0)}</div>
+      <div class="kpi-label">Офферы</div>
+    </div>
+  </div>
+
+  <div class="controls-bar">
+    <div class="controls-top">
+      <div class="tabs-group">
+        <button class="tab-btn active" id="tab-kanban" onclick="switchView('kanban')">📋 Kanban Воронка</button>
+        <button class="tab-btn" id="tab-table" onclick="switchView('table')">📊 Детальная таблица ({len(data['applications'])})</button>
+      </div>
+      <input type="text" id="liveSearch" class="search-box" placeholder="🔍 Быстрый поиск по компании, должности, заметкам... (Клавиша: /)" oninput="applyFilters()">
+    </div>
+
+    <div class="filters-group">
+      <span class="filter-label">Сектор:</span>
+      <button class="pill-btn active" data-filter-type="sector" data-val="all" onclick="setFilter('sector', 'all', this)">Все секторы</button>
+      <button class="pill-btn" data-filter-type="sector" data-val="Finance" onclick="setFilter('sector', 'Finance', this)">🏦 Банки & Финансы</button>
+      <button class="pill-btn" data-filter-type="sector" data-val="Analytics" onclick="setFilter('sector', 'Analytics', this)">📊 Аналитика & IT</button>
+      <button class="pill-btn" data-filter-type="sector" data-val="Logistics" onclick="setFilter('sector', 'Logistics', this)">🚚 Логистика & Склад</button>
+      <button class="pill-btn" data-filter-type="sector" data-val="Management" onclick="setFilter('sector', 'Management', this)">👔 Менеджмент</button>
+
+      <span class="filter-label" style="margin-left: 14px;">Приоритет:</span>
+      <button class="pill-btn active" data-filter-type="tier" data-val="all" onclick="setFilter('tier', 'all', this)">Все Tiers</button>
+      <button class="pill-btn" data-filter-type="tier" data-val="1" onclick="setFilter('tier', '1', this)">⭐ Tier 1</button>
+      <button class="pill-btn" data-filter-type="tier" data-val="2" onclick="setFilter('tier', '2', this)">🔷 Tier 2</button>
+      <button class="pill-btn" data-filter-type="tier" data-val="3" onclick="setFilter('tier', '3', this)">⚪ Tier 3</button>
+    </div>
+  </div>
+
+  <!-- KANBAN BOARD VIEW -->
+  <div class="kanban-board" id="view-kanban">
     {''.join(columns_html)}
   </div>
+
+  <!-- TABLE VIEW -->
+  <div class="table-view-container" id="view-table">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Компания</th>
+          <th>Должность</th>
+          <th>Приоритет</th>
+          <th>Сектор</th>
+          <th>Зарплата</th>
+          <th>Этап найма</th>
+          <th>Обновлено</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody>
+        {''.join(table_rows)}
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    let activeSector = 'all';
+    let activeTier = 'all';
+
+    function switchView(viewName) {{
+      const kanbanView = document.getElementById('view-kanban');
+      const tableView = document.getElementById('view-table');
+      const tabKanban = document.getElementById('tab-kanban');
+      const tabTable = document.getElementById('tab-table');
+
+      if (viewName === 'kanban') {{
+        kanbanView.style.display = 'grid';
+        tableView.style.display = 'none';
+        tabKanban.classList.add('active');
+        tabTable.classList.remove('active');
+      }} else {{
+        kanbanView.style.display = 'none';
+        tableView.style.display = 'block';
+        tabKanban.classList.remove('active');
+        tabTable.classList.add('active');
+      }}
+    }}
+
+    function setFilter(type, val, btn) {{
+      document.querySelectorAll(`[data-filter-type="${{type}}"]`).forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (type === 'sector') activeSector = val;
+      if (type === 'tier') activeTier = val;
+      applyFilters();
+    }}
+
+    function applyFilters() {{
+      const q = document.getElementById('liveSearch').value.toLowerCase().trim();
+
+      // Filter Kanban cards
+      document.querySelectorAll('.card').forEach(card => {{
+        const searchBlob = (card.getAttribute('data-search') || '').toLowerCase();
+        const sector = card.getAttribute('data-sector') || '';
+        const tier = card.getAttribute('data-tier') || '';
+
+        const matchQ = !q || searchBlob.includes(q);
+        const matchSector = (activeSector === 'all') || (sector === activeSector);
+        const matchTier = (activeTier === 'all') || (tier === activeTier);
+
+        card.style.display = (matchQ && matchSector && matchTier) ? 'block' : 'none';
+      }});
+
+      // Filter Table rows
+      document.querySelectorAll('.table-row').forEach(row => {{
+        const searchBlob = (row.getAttribute('data-search') || '').toLowerCase();
+        const sector = row.getAttribute('data-sector') || '';
+        const tier = row.getAttribute('data-tier') || '';
+
+        const matchQ = !q || searchBlob.includes(q);
+        const matchSector = (activeSector === 'all') || (sector === activeSector);
+        const matchTier = (activeTier === 'all') || (tier === activeTier);
+
+        row.style.display = (matchQ && matchSector && matchTier) ? '' : 'none';
+      }});
+    }}
+
+    // Focus search on '/'
+    document.addEventListener('keydown', (e) => {{
+      if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {{
+        e.preventDefault();
+        document.getElementById('liveSearch').focus();
+      }}
+    }});
+  </script>
 </body>
 </html>"""
-    output_path.write_text(html, encoding="utf-8")
+    output_path.write_text(html_page, encoding="utf-8")
 
 
 def generate_pipeline_markdown(data: Dict[str, Any], output_path: Path) -> None:
