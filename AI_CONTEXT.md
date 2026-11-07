@@ -17,35 +17,40 @@ related:
 
 ```yaml
 {
-  "generated_at": "2026-11-08T00:18:36.315592",
+  "generated_at": "2026-11-08T00:20:35.200332",
   "database": "db/positions.db",
-  "vacancies_total": 1533,
-  "active_vacancies": 1533,
-  "total_vacancies": 1533,
-  "applications_total": 107,
-  "total_applications": 107,
+  "vacancies_total": 1,
+  "active_vacancies": 1,
+  "total_vacancies": 1,
+  "applications_total": 1,
+  "total_applications": 1,
   "statuses": {
-    "applied": 107,
+    "applied": 0,
     "viewed": 0,
-    "invited": 0,
+    "invited": 1,
     "interview": 0,
     "offer": 0,
     "rejected": 0,
     "declined": 0
   },
   "tier_distribution": {
-    "1": 93,
-    "2": 160,
-    "3": 1280
+    "1": 1,
+    "2": 0,
+    "3": 0
   },
   "sector_distribution": {
-    "Analytics": 103,
-    "Finance": 312,
-    "Logistics": 235,
-    "Management": 883
+    "Finance": 1
   },
-  "urgent_leads_count": 0,
-  "urgent_leads": [],
+  "urgent_leads_count": 1,
+  "urgent_leads": [
+    {
+      "id": "888777",
+      "company": "Apex Insurance",
+      "title": "Lead Financial Controller",
+      "status": "invited",
+      "notes": "Direct outreach from partner\n[2026-11-08T00:20:35.023084] Interview scheduled with Head of Finance"
+    }
+  ],
   "recommended_next_actions": [
     "Check urgent_leads to prepare tailored CV and interview prep",
     "To sync new batch from Hermes, run: python scripts/sync_hermes.py --json",
