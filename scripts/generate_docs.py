@@ -342,35 +342,123 @@ def generate_documents_for_vacancy(
     return result
 
 
+def compile_master_resume(output_pdf: Path | None = None) -> Dict[str, Any]:
+    """Compiles the master resume into a standalone PDF via Typst."""
+    target_out = output_pdf or (Config.MASTER_DIR / "resume.pdf")
+    typ_path = Config.MASTER_DIR / "resume.typ"
+
+    if not typ_path.exists():
+        return {"success": False, "error": f"Master resume template not found at {typ_path}"}
+
+    # Prepare replacements
+    content = typ_path.read_text(encoding="utf-8")
+    replacements = {
+        "{{candidate_name}}": Config.CANDIDATE_NAME,
+        "{{candidate_phone}}": Config.CANDIDATE_PHONE,
+        "{{candidate_email}}": escape_typst(Config.CANDIDATE_EMAIL),
+        "{{candidate_telegram}}": escape_typst(Config.CANDIDATE_TELEGRAM),
+    }
+    for k, v in replacements.items():
+        content = content.replace(k, str(v))
+
+    tmp_typ = Config.MASTER_DIR / "resume_compiled.typ"
+    tmp_typ.write_text(content, encoding="utf-8")
+    try:
+        ok = render_typst_to_pdf(tmp_typ, target_out)
+        if not ok:
+            # Fallback to HTML
+            html_path = Config.MASTER_DIR / "resume.html"
+            ok = render_html_to_pdf(html_path, target_out)
+        return {"success": ok, "pdf_path": str(target_out), "engine": "typst" if ok else "failed"}
+    finally:
+        if tmp_typ.exists():
+            tmp_typ.unlink()
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate tailored Cover Letter and CV for vacancy")
-    parser.add_argument("--vacancy-id", type=str, required=True, help="Target vacancy ID")
+    parser.add_argument("--vacancy-id", type=str, default=None, help="Target vacancy ID")
+    parser.add_argument("--all-applied", action="store_true", help="Generate docs for all applied vacancies")
+    parser.add_argument("--tier", type=int, choices=[1, 2, 3], default=None, help="Generate docs for all vacancies in tier")
+    parser.add_argument("--compile-master", action="store_true", help="Compile master resume.pdf")
+    parser.add_argument("--limit", type=int, default=None, help="Limit number of vacancies processed")
     parser.add_argument("--format", type=str, default="md,pdf", help="Output formats comma-separated (md,html,pdf)")
     parser.add_argument("--db-path", type=str, default=None, help="Custom DB path")
     parser.add_argument("--json", action="store_true", help="Output machine-readable JSON")
 
     args = parser.parse_args()
-    db_target = Path(args.db_path) if args.db_path else None
-    formats = args.format.split(",")
+    db_target = Path(args.db_path) if args.db_path else Config.DB_PATH
+    formats = [f.strip().lower() for f in args.format.split(",") if f.strip()]
 
-    res = generate_documents_for_vacancy(
-        vacancy_id=args.vacancy_id,
-        doc_formats=formats,
-        db_path=db_target,
-    )
+    # If --compile-master requested
+    if args.compile_master:
+        res_m = compile_master_resume()
+        if args.json:
+            print(json.dumps(res_m, indent=2, ensure_ascii=False))
+        else:
+            print(f"[OK] Master resume compiled: {res_m.get('pdf_path')}")
+        return Config.EXIT_SUCCESS if res_m["success"] else Config.EXIT_ERROR
+
+    # Determine target vacancy IDs
+    vacancy_ids: List[str] = []
+    if args.vacancy_id:
+        vacancy_ids.append(args.vacancy_id)
+    elif args.all_applied:
+        conn = get_connection(db_target)
+        c = conn.cursor()
+        query = "SELECT DISTINCT vacancy_id FROM applications ORDER BY last_updated DESC"
+        if args.limit:
+            query += f" LIMIT {args.limit}"
+        vacancy_ids = [r[0] for r in c.execute(query).fetchall()]
+        conn.close()
+    elif args.tier:
+        conn = get_connection(db_target)
+        c = conn.cursor()
+        query = f"SELECT id FROM vacancies WHERE tier = {args.tier} ORDER BY id ASC"
+        if args.limit:
+            query += f" LIMIT {args.limit}"
+        vacancy_ids = [r[0] for r in c.execute(query).fetchall()]
+        conn.close()
+    else:
+        parser.print_help()
+        return Config.EXIT_ERROR
+
+    if not vacancy_ids:
+        err = {"success": False, "error": "No matching vacancies found", "code": Config.EXIT_NO_DATA}
+        if args.json:
+            print(json.dumps(err, indent=2, ensure_ascii=False))
+        else:
+            print("[WARN] No vacancies found matching query", file=sys.stderr)
+        return Config.EXIT_NO_DATA
+
+    results = []
+    for vid in vacancy_ids:
+        r = generate_documents_for_vacancy(
+            vacancy_id=vid,
+            doc_formats=formats,
+            db_path=db_target,
+        )
+        results.append(r)
 
     if args.json:
-        print(json.dumps(res, indent=2, ensure_ascii=False))
-    else:
-        if res["success"]:
-            print(f"[OK] Documents generated for [{res['vacancy_id']}] {res['company']} — {res['title']}:")
-            print(f"     Directory: {res['directory']}")
-            for k, p in res["files"].items():
-                print(f"       - {k}: {p}")
+        if args.vacancy_id and len(results) == 1:
+            out = results[0]
         else:
-            print(f"[ERROR] {res['error']}", file=sys.stderr)
+            out = {
+                "success": True,
+                "total_processed": len(results),
+                "engine": "typst",
+                "results": results,
+            }
+        print(json.dumps(out, indent=2, ensure_ascii=False))
+    else:
+        print(f"[OK] Successfully generated {len(results)} tailored document sets via Typst:")
+        for r in results:
+            if r["success"]:
+                print(f"     [{r['vacancy_id']}] {r['company']} — {r['title']}")
+                print(f"       -> {r['directory']}")
 
-    return res["code"]
+    return Config.EXIT_SUCCESS
 
 
 if __name__ == "__main__":
