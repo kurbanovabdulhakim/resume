@@ -94,8 +94,31 @@ def resolve_templates(sector: str, title: str) -> tuple[Path, Path, str, str]:
     return cl_template, cv_variant, hook, achieve
 
 
+def escape_typst(text: str) -> str:
+    """Escapes special Typst markup characters (like @ for citations)."""
+    return text.replace("@", "\\@")
+
+
+def render_typst_to_pdf(typ_path: Path, pdf_path: Path) -> bool:
+    """Renders Typst file to pristine vector PDF via standalone Typst binary."""
+    typst_bin = Config.get_typst_binary()
+    if not typst_bin:
+        return False
+    try:
+        cmd = [
+            str(typst_bin),
+            "compile",
+            str(typ_path),
+            str(pdf_path),
+        ]
+        res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=10)
+        return pdf_path.exists() and pdf_path.stat().st_size > 0
+    except Exception:
+        return False
+
+
 def render_html_to_pdf(html_path: Path, pdf_path: Path) -> bool:
-    """Renders HTML file to PDF via headless Microsoft Edge."""
+    """Renders HTML file to PDF via headless Microsoft Edge (fallback engine)."""
     edge_bin = Config.get_edge_binary()
     if not edge_bin:
         return False
@@ -242,12 +265,46 @@ def generate_documents_for_vacancy(
 
         if "pdf" in formats:
             cl_pdf_path = target_dir / "cover_letter.pdf"
-            if render_html_to_pdf(cl_html_path, cl_pdf_path):
-                generated_files["cover_letter_pdf"] = str(cl_pdf_path)
-
             cv_pdf_path = target_dir / "cv_tailored.pdf"
-            if render_html_to_pdf(cv_html_path, cv_pdf_path):
-                generated_files["cv_tailored_pdf"] = str(cv_pdf_path)
+
+            cl_typ_tmpl = cl_tmpl_path.with_suffix(".typ")
+            cv_typ_tmpl = cv_tmpl_path.with_suffix(".typ")
+            typst_bin = Config.get_typst_binary()
+
+            used_typst = False
+            if typst_bin and cl_typ_tmpl.exists() and cv_typ_tmpl.exists():
+                # Render Typst cover letter
+                cl_typ_content = cl_typ_tmpl.read_text(encoding="utf-8")
+                for k, v in replacements.items():
+                    cl_typ_content = cl_typ_content.replace(k, escape_typst(str(v)))
+                cl_typ_path = target_dir / "cover_letter.typ"
+                cl_typ_path.write_text(cl_typ_content, encoding="utf-8")
+                generated_files["cover_letter_typ"] = str(cl_typ_path)
+
+                # Render Typst CV
+                cv_typ_content = cv_typ_tmpl.read_text(encoding="utf-8")
+                for k, v in replacements.items():
+                    cv_typ_content = cv_typ_content.replace(k, escape_typst(str(v)))
+                cv_typ_path = target_dir / "cv_tailored.typ"
+                cv_typ_path.write_text(cv_typ_content, encoding="utf-8")
+                generated_files["cv_tailored_typ"] = str(cv_typ_path)
+
+                # Compile with Typst
+                ok_cl = render_typst_to_pdf(cl_typ_path, cl_pdf_path)
+                ok_cv = render_typst_to_pdf(cv_typ_path, cv_pdf_path)
+                if ok_cl and ok_cv:
+                    generated_files["cover_letter_pdf"] = str(cl_pdf_path)
+                    generated_files["cv_tailored_pdf"] = str(cv_pdf_path)
+                    generated_files["engine_used"] = "typst"
+                    used_typst = True
+
+            if not used_typst:
+                # Fallback to headless Edge
+                if render_html_to_pdf(cl_html_path, cl_pdf_path):
+                    generated_files["cover_letter_pdf"] = str(cl_pdf_path)
+                if render_html_to_pdf(cv_html_path, cv_pdf_path):
+                    generated_files["cv_tailored_pdf"] = str(cv_pdf_path)
+                generated_files["engine_used"] = "edge_headless"
 
     # Record in documents table
     rel_cl = str(cl_md_path.relative_to(Config.PROJECT_ROOT))

@@ -62,10 +62,28 @@ class Config:
         Path("C:/Program Files/Microsoft/Edge/Application/msedge.exe"),
     ]
 
+    # Typst Executable Paths
+    TYPST_PATHS = [
+        Path(os.environ.get("TYPST_BIN", "")),
+        Path(os.environ.get("LOCALAPPDATA", "")) / "Microsoft" / "WinGet" / "Packages" / "Typst.Typst_Microsoft.Winget.Source_8wekyb3d8bbwe" / "typst-x86_64-pc-windows-msvc" / "typst.exe",
+    ]
+
     @classmethod
     def get_hermes_queue_path(cls) -> Optional[Path]:
         """Finds the first existing path to HERMES_BATCH_QUEUE.json."""
         for p in cls.DEFAULT_HERMES_QUEUE_PATHS:
+            if p and p.is_file():
+                return p.resolve()
+        return None
+
+    @classmethod
+    def get_typst_binary(cls) -> Optional[Path]:
+        """Finds typst.exe binary for ultra-fast vector PDF rendering."""
+        import shutil
+        which_path = shutil.which("typst")
+        if which_path:
+            return Path(which_path).resolve()
+        for p in cls.TYPST_PATHS:
             if p and p.is_file():
                 return p.resolve()
         return None
