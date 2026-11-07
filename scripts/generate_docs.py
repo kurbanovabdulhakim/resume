@@ -1,0 +1,308 @@
+"""
+Document Generator Engine.
+
+Generates tailored cover letters and CV variants for targeted job vacancies.
+Outputs assets to generated/<company_slug>_<vacancy_id>/ and registers them in documents table.
+
+Usage:
+    python scripts/generate_docs.py --vacancy-id 138959503 [--format md,pdf] [--json]
+"""
+
+from __future__ import annotations
+import argparse
+import datetime
+import json
+import re
+import subprocess
+import sys
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+# Ensure project root is in sys.path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from scripts.config import Config
+from scripts.init_db import get_connection, init_database
+from scripts.logger import log_event
+
+
+def slugify(text: str) -> str:
+    """Converts string into a safe filesystem slug."""
+    text = re.sub(r"[^\w\s-]", "", text, flags=re.UNICODE).strip().lower()
+    return re.sub(r"[-\s]+", "_", text)[:40] or "company"
+
+
+def strip_yaml_frontmatter(content: str) -> str:
+    """Strips YAML frontmatter delimiter (--- ... ---) from markdown text."""
+    if content.startswith("---"):
+        parts = content.split("---", 2)
+        if len(parts) >= 3:
+            return parts[2].lstrip()
+    return content
+
+
+def resolve_templates(sector: str, title: str) -> tuple[Path, Path, str, str]:
+    """Resolves cover letter template and CV variant based on sector and title."""
+    s_lower = f"{sector} {title}".lower()
+
+    # Sector template
+    if any(k in s_lower for k in ["банк", "финанс", "аудит", "бухгалтер", "finance"]):
+        cl_template = Config.TEMPLATES_DIR / "banking_finance.md"
+        hook = "Финансовая стабильность и точность аналитики — фундамент успешного развития любого масштабного бизнеса."
+        achieve = "Внедрил прозрачный финансовый учет P&L и сократил постоянные расходы на 18%."
+    elif any(k in s_lower for k in ["логистик", "склад", "вэд", "авиа", "logistics"]):
+        cl_template = Config.TEMPLATES_DIR / "logistics_aviation.md"
+        hook = "Эффективная логистика и бесперебойная цепочка поставок напрямую определяют прибыльность и масштабирование."
+        achieve = "Оптимизировал регламенты обработки логистических заказов, сократив среднее время исполнения на 25%."
+    elif any(k in s_lower for k in ["аналитик", "data", "it", "bi", "analytics"]):
+        cl_template = Config.TEMPLATES_DIR / "it_analytics.md"
+        hook = "Качественная работа с данными и автоматизация процессов позволяют компании оперативно принимать обоснованные решения."
+        achieve = "Построил сквозные дашборды и обновил регламенты, снизив операционные ошибки на 22%."
+    else:
+        cl_template = Config.TEMPLATES_DIR / "fmcg_distribution.md"
+        hook = "Операционная прозрачность и оптимизация ресурсов дают ключевое преимущество на конкурентном рынке."
+        achieve = "Организовал строгий материальный учет и внедрил регламенты, исключив недостачи и снизив издержки на 18%."
+
+    if not cl_template.exists():
+        cl_template = Config.TEMPLATES_DIR / "_template_base.md"
+
+    # CV variant
+    if any(k in s_lower for k in ["финанс", "бухгалтер", "аудит", "инвест", "казначей"]):
+        cv_variant = Config.VARIANTS_DIR / "financial_analyst.md"
+        variant_name = "financial_analyst"
+    elif any(k in s_lower for k in ["операцион", "руководит", "управляющ", "директор", "operations", "coo", "ceo"]):
+        cv_variant = Config.VARIANTS_DIR / "operations_manager.md"
+        variant_name = "operations_manager"
+    else:
+        cv_variant = Config.VARIANTS_DIR / "business_analyst.md"
+        variant_name = "business_analyst"
+
+    return cl_template, cv_variant, hook, achieve
+
+
+def render_html_to_pdf(html_path: Path, pdf_path: Path) -> bool:
+    """Renders HTML file to PDF via headless Microsoft Edge."""
+    edge_bin = Config.get_edge_binary()
+    if not edge_bin:
+        return False
+    try:
+        cmd = [
+            str(edge_bin),
+            "--headless",
+            "--disable-gpu",
+            f"--print-to-pdf={pdf_path}",
+            str(html_path),
+        ]
+        res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=15)
+        return pdf_path.exists() and pdf_path.stat().st_size > 0
+    except Exception:
+        return False
+
+
+def convert_markdown_to_simple_html(title: str, md_text: str) -> str:
+    """Lightweight stdlib markdown to styled HTML converter."""
+    # Convert bold, lists, and line breaks
+    html_lines = []
+    for line in md_text.splitlines():
+        line = line.strip()
+        if not line:
+            html_lines.append("<br>")
+            continue
+        if line.startswith("# "):
+            html_lines.append(f"<h1>{line[2:]}</h1>")
+        elif line.startswith("## "):
+            html_lines.append(f"<h2>{line[3:]}</h2>")
+        elif line.startswith("### "):
+            html_lines.append(f"<h3>{line[4:]}</h3>")
+        elif line.startswith("- "):
+            html_lines.append(f"<li>{line[2:]}</li>")
+        else:
+            formatted = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", line)
+            html_lines.append(f"<p>{formatted}</p>")
+
+    body_content = "\n".join(html_lines)
+    return f"""<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>{title}</title>
+  <style>
+    @page {{ margin: 15mm; size: A4; }}
+    body {{
+      font-family: 'Segoe UI', Arial, sans-serif;
+      line-height: 1.5;
+      color: #1e293b;
+      margin: 0;
+      padding: 30px;
+    }}
+    h1 {{ font-size: 20px; color: #0f172a; border-bottom: 2px solid #0284c7; padding-bottom: 6px; }}
+    h2 {{ font-size: 16px; color: #0284c7; margin-top: 20px; }}
+    h3 {{ font-size: 14px; color: #334155; margin-top: 15px; }}
+    p, li {{ font-size: 13px; color: #334155; }}
+    strong {{ color: #0f172a; }}
+  </style>
+</head>
+<body>
+  {body_content}
+</body>
+</html>"""
+
+
+def generate_documents_for_vacancy(
+    vacancy_id: str,
+    doc_formats: List[str] | None = None,
+    db_path: Path | None = None,
+) -> Dict[str, Any]:
+    """Generates tailored cover letter and CV files for a specific vacancy."""
+    target_db = Path(db_path) if db_path else Config.DB_PATH
+    formats = [f.strip().lower() for f in (doc_formats or ["md", "pdf"])]
+
+    conn = get_connection(target_db)
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT id, title, company, sector, tier, salary_text FROM vacancies WHERE id = ?",
+        (vacancy_id,),
+    )
+    vac = cursor.fetchone()
+
+    if not vac:
+        conn.close()
+        err_msg = f"Vacancy ID '{vacancy_id}' not found in database."
+        log_event("DOC_GEN_ERROR", {"error": err_msg, "vacancy_id": vacancy_id}, level="ERROR")
+        return {"success": False, "error": err_msg, "code": Config.EXIT_NO_DATA}
+
+    vid, title, company, sector, tier, salary_text = vac
+    company_slug = slugify(company)
+    target_dir = Config.GENERATED_DIR / f"{company_slug}_{vid}"
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    cl_tmpl_path, cv_tmpl_path, hook, achieve = resolve_templates(sector, title)
+
+    raw_cl = cl_tmpl_path.read_text(encoding="utf-8") if cl_tmpl_path.exists() else ""
+    raw_cv = cv_tmpl_path.read_text(encoding="utf-8") if cv_tmpl_path.exists() else ""
+
+    clean_cl = strip_yaml_frontmatter(raw_cl)
+    today_str = datetime.date.today().isoformat()
+    now_iso = datetime.datetime.now().isoformat()
+
+    replacements = {
+        "{{company}}": company,
+        "{{position}}": title,
+        "{{candidate_name}}": Config.CANDIDATE_NAME,
+        "{{candidate_phone}}": Config.CANDIDATE_PHONE,
+        "{{candidate_email}}": Config.CANDIDATE_EMAIL,
+        "{{candidate_telegram}}": Config.CANDIDATE_TELEGRAM,
+        "{{salary_expectation}}": salary_text or Config.SALARY_EXPECTATION_DEFAULT,
+        "{{date}}": today_str,
+        "{{sector_hook}}": hook,
+        "{{key_achievement}}": achieve,
+    }
+
+    # Render Cover Letter
+    rendered_cl = clean_cl
+    for k, v in replacements.items():
+        rendered_cl = rendered_cl.replace(k, str(v))
+
+    generated_files: Dict[str, str] = {}
+
+    # Write Markdown
+    cl_md_path = target_dir / "cover_letter.md"
+    cl_md_path.write_text(rendered_cl, encoding="utf-8")
+    generated_files["cover_letter_md"] = str(cl_md_path)
+
+    cv_md_path = target_dir / "cv_tailored.md"
+    cv_md_path.write_text(raw_cv, encoding="utf-8")
+    generated_files["cv_md"] = str(cv_md_path)
+
+    # HTML / PDF rendering
+    if "html" in formats or "pdf" in formats:
+        cl_html = convert_markdown_to_simple_html(f"Cover Letter — {company}", rendered_cl)
+        cl_html_path = target_dir / "cover_letter.html"
+        cl_html_path.write_text(cl_html, encoding="utf-8")
+        generated_files["cover_letter_html"] = str(cl_html_path)
+
+        cv_html = convert_markdown_to_simple_html(f"CV — {title}", raw_cv)
+        cv_html_path = target_dir / "cv_tailored.html"
+        cv_html_path.write_text(cv_html, encoding="utf-8")
+        generated_files["cv_html"] = str(cv_html_path)
+
+        if "pdf" in formats:
+            cl_pdf_path = target_dir / "cover_letter.pdf"
+            if render_html_to_pdf(cl_html_path, cl_pdf_path):
+                generated_files["cover_letter_pdf"] = str(cl_pdf_path)
+
+            cv_pdf_path = target_dir / "cv_tailored.pdf"
+            if render_html_to_pdf(cv_html_path, cv_pdf_path):
+                generated_files["cv_tailored_pdf"] = str(cv_pdf_path)
+
+    # Record in documents table
+    rel_cl = str(cl_md_path.relative_to(Config.PROJECT_ROOT))
+    cursor.execute(
+        """
+        INSERT INTO documents (vacancy_id, doc_type, variant_used, file_path, generated_at)
+        VALUES (?, 'cover_letter', ?, ?, ?)
+    """,
+        (vid, cl_tmpl_path.stem, rel_cl, now_iso),
+    )
+
+    rel_cv = str(cv_md_path.relative_to(Config.PROJECT_ROOT))
+    cursor.execute(
+        """
+        INSERT INTO documents (vacancy_id, doc_type, variant_used, file_path, generated_at)
+        VALUES (?, 'cv', ?, ?, ?)
+    """,
+        (vid, cv_tmpl_path.stem, rel_cv, now_iso),
+    )
+
+    conn.commit()
+    conn.close()
+
+    result = {
+        "success": True,
+        "code": Config.EXIT_SUCCESS,
+        "vacancy_id": vid,
+        "company": company,
+        "title": title,
+        "directory": str(target_dir),
+        "files": generated_files,
+        "timestamp": now_iso,
+    }
+    log_event("DOCS_GENERATED", result)
+    return result
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Generate tailored Cover Letter and CV for vacancy")
+    parser.add_argument("--vacancy-id", type=str, required=True, help="Target vacancy ID")
+    parser.add_argument("--format", type=str, default="md,pdf", help="Output formats comma-separated (md,html,pdf)")
+    parser.add_argument("--db-path", type=str, default=None, help="Custom DB path")
+    parser.add_argument("--json", action="store_true", help="Output machine-readable JSON")
+
+    args = parser.parse_args()
+    db_target = Path(args.db_path) if args.db_path else None
+    formats = args.format.split(",")
+
+    res = generate_documents_for_vacancy(
+        vacancy_id=args.vacancy_id,
+        doc_formats=formats,
+        db_path=db_target,
+    )
+
+    if args.json:
+        print(json.dumps(res, indent=2, ensure_ascii=False))
+    else:
+        if res["success"]:
+            print(f"[OK] Documents generated for [{res['vacancy_id']}] {res['company']} — {res['title']}:")
+            print(f"     Directory: {res['directory']}")
+            for k, p in res["files"].items():
+                print(f"       - {k}: {p}")
+        else:
+            print(f"[ERROR] {res['error']}", file=sys.stderr)
+
+    return res["code"]
+
+
+if __name__ == "__main__":
+    sys.exit(main())
