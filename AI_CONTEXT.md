@@ -17,7 +17,7 @@ related:
 
 ```yaml
 {
-  "generated_at": "2026-11-16T00:35:11.725880",
+  "generated_at": "2026-11-16T00:42:51.347800",
   "database": "db/positions.db",
   "vacancies_total": 5443,
   "active_vacancies": 3105,

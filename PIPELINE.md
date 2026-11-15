@@ -16,7 +16,7 @@ related:
 
 # Job Application Pipeline Summary
 
-> **Auto-generated:** `2026-11-16T00:35:11.725880`  
+> **Auto-generated:** `2026-11-16T00:42:51.346795`  
 > **Single Source of Truth:** `db/positions.db`
 
 ---
