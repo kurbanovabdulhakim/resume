@@ -26,11 +26,15 @@ from scripts.logger import log_event
 
 
 def get_connection(db_path: Path | None = None) -> sqlite3.Connection:
-    """Returns an active SQLite connection with foreign keys enabled."""
+    """Returns an active SQLite connection with foreign keys and WAL mode enabled."""
     target_path = Path(db_path) if db_path else Config.DB_PATH
     target_path.parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(target_path)
+    conn = sqlite3.connect(target_path, timeout=30.0)
     conn.execute("PRAGMA foreign_keys = ON;")
+    try:
+        conn.execute("PRAGMA journal_mode = WAL;")
+    except Exception:
+        pass
     return conn
 
 

@@ -1,0 +1,378 @@
+{
+  "updated_at": "2026-11-15T20:22:25",
+  "total_scanned": 120,
+  "total_flagged": 37,
+  "total_repaired": 21,
+  "items": [
+    {
+      "vacancy_id": "138928260",
+      "company": "INTERNATIONAL GOLDSTARS SCHOOL",
+      "title": "Позиция 5",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "INTERNATIONAL GOLDSTARS SCHOOL\nБыл онлайн 13.11\nВакансия\nКас",
+      "page": 6,
+      "card_index": 4,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "139136332",
+      "company": "InFinBank",
+      "title": "Позиция 6",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "InFinBank\nБыл онлайн 13.11\nВакансия\nKorporativ kreditlash bo",
+      "page": 6,
+      "card_index": 5,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "139166811",
+      "company": "RWB (Wildberries & Russ)",
+      "title": "Позиция 13",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "RWB (Wildberries & Russ)\nБыл онлайн 13.11\nВакансия\nМенеджер ",
+      "page": 7,
+      "card_index": 12,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "139175480",
+      "company": "Eurasian Machinery (Евразиан Машинери)",
+      "title": "Позиция 16",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Eurasian Machinery (Евразиан Машинери)\nБыл онлайн 13.11\nВака",
+      "page": 7,
+      "card_index": 15,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "139063180",
+      "company": "Citi Fuel (ООО Staff Atlantic)",
+      "title": "Позиция 19",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Citi Fuel (ООО Staff Atlantic)\nБыл онлайн 12.11\nВакансия\nPri",
+      "page": 7,
+      "card_index": 18,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "138736113",
+      "company": "ASSALOM-ESTATE",
+      "title": "Позиция 2",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "ASSALOM-ESTATE\nБыл онлайн 13.11\nВакансия\nБизнес-аналитик по ",
+      "page": 8,
+      "card_index": 1,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "139211827",
+      "company": "HamkorBank",
+      "title": "Позиция 3",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "HamkorBank\nБыл онлайн в 17:41\nВакансия\nМенеджер по работе с ",
+      "page": 8,
+      "card_index": 2,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "139239601",
+      "company": "Ipotekabank OTP Group",
+      "title": "Позиция 4",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Ipotekabank OTP Group\nБыл онлайн 13.11\nВакансия\nСпециалист а",
+      "page": 8,
+      "card_index": 3,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "138904005",
+      "company": "ИП ООО Xalq Retail",
+      "title": "Позиция 5",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "ИП ООО Xalq Retail\nБыл онлайн недавно\nВакансия\nПомощник кате",
+      "page": 8,
+      "card_index": 4,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "138348834",
+      "company": "SILKWAY SOLUTIONS",
+      "title": "Позиция 6",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "SILKWAY SOLUTIONS\nБыл онлайн 13.11\nВакансия\nАссистент отдела",
+      "page": 8,
+      "card_index": 5,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "139280323",
+      "company": "InFinBank",
+      "title": "Позиция 7",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "InFinBank\nБыл онлайн 13.11\nВакансия\nKassir (Amaliyot boshqar",
+      "page": 8,
+      "card_index": 6,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "138864608",
+      "company": "MAXTERA EXCLUSIVE",
+      "title": "Позиция 8",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "MAXTERA EXCLUSIVE\nБыл онлайн 13.11\nВакансия\nМенеджер по прое",
+      "page": 8,
+      "card_index": 7,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139134530",
+      "company": "UzCarlsberg",
+      "title": "Позиция 9",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "UzCarlsberg\nБыл онлайн в 19:01\nВакансия\nФинансовый аналитик\n",
+      "page": 8,
+      "card_index": 8,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "137409596",
+      "company": "KASH NETWORKS",
+      "title": "Позиция 12",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "KASH NETWORKS\nБыл онлайн в 04:41\nВакансия\nSales Agent of Air",
+      "page": 8,
+      "card_index": 11,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139148269",
+      "company": "ONEFOOD",
+      "title": "Позиция 20",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "ONEFOOD\nБыл онлайн 13.11\nВакансия\nПомощник операционного дир",
+      "page": 8,
+      "card_index": 19,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "138908517",
+      "company": "Healthy Home Uz",
+      "title": "Позиция 1",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Healthy Home Uz\nБыл онлайн в 14:32\nВакансия\nФинансовый ассис",
+      "page": 9,
+      "card_index": 0,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139058972",
+      "company": "TRADE INVEST BARAKA",
+      "title": "Позиция 2",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "TRADE INVEST BARAKA\nБыл онлайн 13.11\nВакансия\nКатегорийный м",
+      "page": 9,
+      "card_index": 1,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "138955342",
+      "company": "Капиталбанк. Головной офис",
+      "title": "Позиция 3",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Капиталбанк. Головной офис\nБыл онлайн недавно\nВакансия\nГлавн",
+      "page": 9,
+      "card_index": 2,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139112244",
+      "company": "Bolter",
+      "title": "Позиция 4",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Bolter\nБыл онлайн вчера\nВакансия\nВедущий специалист отдела з",
+      "page": 9,
+      "card_index": 3,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139251514",
+      "company": "ASSET LEASING AND FINANCE",
+      "title": "Позиция 5",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "ASSET LEASING AND FINANCE\nБыл онлайн 13.11\nВакансия\nОфис-мен",
+      "page": 9,
+      "card_index": 4,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "138704013",
+      "company": "ATSLAHA-18",
+      "title": "Позиция 6",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "ATSLAHA-18\nБыл онлайн 13.11\nВакансия\nОфис-менеджер\n9 ноября\n",
+      "page": 9,
+      "card_index": 5,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139129394",
+      "company": "TYRE ZONE",
+      "title": "Позиция 7",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "TYRE ZONE\nБыл онлайн 13.11\nВакансия\nОператор - аналитик\n9 но",
+      "page": 9,
+      "card_index": 6,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139207409",
+      "company": "СП ООО EAST-WEST INVEST",
+      "title": "Позиция 8",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "СП ООО EAST-WEST INVEST\nБыл онлайн недавно\nВакансия\nФинансов",
+      "page": 9,
+      "card_index": 7,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139115408",
+      "company": "ОOO Lactalis Central Asia",
+      "title": "Позиция 9",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "ОOO Lactalis Central Asia\nБыл онлайн недавно\nВакансия\nСпециа",
+      "page": 9,
+      "card_index": 8,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "139114696",
+      "company": "Национальный комитет Республики Узбекистан по статистике",
+      "title": "Позиция 10",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Национальный комитет Республики Узбекистан по статистике\nБыл",
+      "page": 9,
+      "card_index": 9,
+      "status": "flagged"
+    },
+    {
+      "vacancy_id": "139206183",
+      "company": "ITG RESOURCES INVESTMENT",
+      "title": "Позиция 12",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "ITG RESOURCES INVESTMENT\nБыл онлайн 11.11\nВакансия\nInternati",
+      "page": 9,
+      "card_index": 11,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139260985",
+      "company": "СOMPASS MANAGEMENT",
+      "title": "Позиция 14",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "СOMPASS MANAGEMENT\nБыл онлайн 13.11\nВакансия\nСпециалист по п",
+      "page": 9,
+      "card_index": 13,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "138243948",
+      "company": "ИП ООО NRG-BI",
+      "title": "Позиция 15",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "ИП ООО NRG-BI\nБыл онлайн недавно\nВакансия\nЭкономист / Эконом",
+      "page": 9,
+      "card_index": 14,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139242303",
+      "company": "Национальный межбанковский процессинговый центр",
+      "title": "Позиция 16",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Национальный межбанковский процессинговый центр\nБыл онлайн в",
+      "page": 9,
+      "card_index": 15,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "138771664",
+      "company": "Капиталбанк. Головной офис",
+      "title": "Позиция 17",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Капиталбанк. Головной офис\nСейчас онлайн\nВакансия\nСпециалист",
+      "page": 9,
+      "card_index": 16,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139173807",
+      "company": "ООО МФО IMPACT FINANCE LEADERS",
+      "title": "Позиция 18",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "ООО МФО IMPACT FINANCE LEADERS\nБыл онлайн в 17:44\nВакансия\nС",
+      "page": 9,
+      "card_index": 17,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139064473",
+      "company": "KUDRATOVA IRODA",
+      "title": "Позиция 19",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "KUDRATOVA IRODA\nБыл онлайн вчера\nВакансия\nБизнес ассистент/П",
+      "page": 9,
+      "card_index": 18,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139234142",
+      "company": "UFARM",
+      "title": "Позиция 20",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "UFARM\nБыл онлайн 13.11\nВакансия\nProcurement & Supply Manager",
+      "page": 9,
+      "card_index": 19,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139272975",
+      "company": "Центр реализации образовательных программ Университета Вебстера в городе Ташкенте",
+      "title": "Позиция 2",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Центр реализации образовательных программ Университета Вебст",
+      "page": 10,
+      "card_index": 1,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139109073",
+      "company": "Национальный межбанковский процессинговый центр",
+      "title": "Позиция 3",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Национальный межбанковский процессинговый центр\nБыл онлайн в",
+      "page": 10,
+      "card_index": 2,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "139263452",
+      "company": "JINGSH",
+      "title": "Позиция 7",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "JINGSH\nБыл онлайн 10.11\nВакансия\nАдминистратор проектов\n9 но",
+      "page": 10,
+      "card_index": 6,
+      "status": "sent"
+    },
+    {
+      "vacancy_id": "138928759",
+      "company": "Assorti Discount Markets",
+      "title": "Позиция 1",
+      "reason": "No candidate cover letter sent",
+      "initial_text": "Assorti Discount Markets\nБыл онлайн вчера\nВакансия\nАналитик\n",
+      "page": 11,
+      "card_index": 0,
+      "status": "flagged"
+    }
+  ]
+}

@@ -35,6 +35,18 @@ class TestConfig(unittest.TestCase):
             lines = f.readlines()
             self.assertTrue(any("TEST_EVENT" in line for line in lines))
 
+    def test_default_hermes_queue_paths_no_dot(self):
+        self.assertNotIn(Path(""), Config.DEFAULT_HERMES_QUEUE_PATHS)
+        self.assertNotIn(Path("."), Config.DEFAULT_HERMES_QUEUE_PATHS)
+
+    def test_hh_autonomy_config_constants(self):
+        self.assertEqual(Config.DATA_DIR.name, "data")
+        self.assertEqual(Config.HH_QUEUE_FILE.parent.name, "data")
+        self.assertEqual(Config.HH_STATE_FILE.parent.name, "data")
+        self.assertEqual(Config.OLLAMA_NUM_CTX, 12288)
+        self.assertEqual(Config.HH_SESSION_PROFILE_DIR.name, "hh_main_session")
+        self.assertTrue(Config.OLLAMA_BASE_URL.startswith("http://"))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -982,13 +982,22 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Compile dashboard.html, PIPELINE.md, and AI_CONTEXT.md")
     parser.add_argument("--db-path", type=str, default=None, help="Custom DB path")
     parser.add_argument("--html-path", type=str, default=None, help="Custom HTML output path")
+    parser.add_argument("--pipeline-md-path", type=str, default=None, help="Custom PIPELINE.md path")
+    parser.add_argument("--ai-context-path", type=str, default=None, help="Custom AI_CONTEXT.md path")
     parser.add_argument("--json", action="store_true", help="Output machine-readable JSON")
 
     args = parser.parse_args()
     db_target = Path(args.db_path) if args.db_path else None
     html_target = Path(args.html_path) if args.html_path else None
+    pipe_target = Path(args.pipeline_md_path) if args.pipeline_md_path else None
+    ctx_target = Path(args.ai_context_path) if args.ai_context_path else None
 
-    res = build_dashboard_artifacts(db_path=db_target, html_path=html_target)
+    res = build_dashboard_artifacts(
+        db_path=db_target,
+        html_path=html_target,
+        pipeline_md_path=pipe_target,
+        ai_context_path=ctx_target,
+    )
 
     if args.json:
         print(json.dumps(res, indent=2, ensure_ascii=False))

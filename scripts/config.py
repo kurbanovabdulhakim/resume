@@ -34,12 +34,26 @@ class Config:
     AI_CONTEXT_MD_PATH: Path = PROJECT_ROOT / "AI_CONTEXT.md"
     AGENTS_MD_PATH: Path = PROJECT_ROOT / "AGENTS.md"
 
-    # Hermes Integration (Look for HERMES_BATCH_QUEUE in neighboring repos or env var)
+    # Hermes Integration & Local Autonomy Runtime Paths
+    DATA_DIR = PROJECT_ROOT / "data"
+    HH_QUEUE_FILE = Path(os.environ.get("HH_QUEUE_FILE") or (DATA_DIR / "hh_autonomy_queue.json"))
+    HH_STATE_FILE = Path(os.environ.get("HH_STATE_FILE") or (DATA_DIR / "hh_autonomy_state.json"))
+    HH_SESSION_PROFILE_DIR = Path(
+        os.environ.get("HH_PROFILE_DIR") or (Path.home() / ".gemini" / "hh_main_session")
+    )
+
+    OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
+    OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5-coder:7b")
+    OLLAMA_NUM_CTX = int(os.environ.get("OLLAMA_NUM_CTX", "12288"))
+
     DEFAULT_HERMES_QUEUE_PATHS = [
-        Path(os.environ.get("HERMES_QUEUE_FILE", "")),
-        PROJECT_ROOT.parent / "mywork" / "HERMES_BATCH_QUEUE.json",
-        PROJECT_ROOT.parent / "MY-WORK" / "HERMES_BATCH_QUEUE.json",
-        PROJECT_ROOT / "HERMES_BATCH_QUEUE.json",
+        p
+        for p in [
+            Path(os.environ["HERMES_QUEUE_FILE"]) if os.environ.get("HERMES_QUEUE_FILE", "").strip() else None,
+            PROJECT_ROOT / "HERMES_BATCH_QUEUE.json",
+            DATA_DIR / "hermes_batch_queue.json",
+        ]
+        if p is not None
     ]
 
     # Standard CLI Exit Codes
@@ -107,6 +121,7 @@ class Config:
             cls.TEMPLATES_DIR,
             cls.GENERATED_DIR,
             cls.LOGS_DIR,
+            cls.DATA_DIR,
             cls.TESTS_DIR,
             cls.SCRIPTS_DIR / "portals",
         ]:

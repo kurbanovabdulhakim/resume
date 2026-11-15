@@ -1,0 +1,3606 @@
+{
+  "total": 240,
+  "today_total": 173,
+  "cards": [
+    {
+      "cardIndex": 0,
+      "company": "Startups DNA (OOO SARAFAN)",
+      "date": "сегодня",
+      "raw_lines": [
+        "Просмотрен",
+        "Главный бухгалтер (\"SISTRONIK SYSTEM\")",
+        "Startups DNA (OOO SARAFAN)",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Главный бухгалтер (\"SISTRONIK SYSTEM\")",
+      "vacancy_id": "138787394",
+      "page": 0
+    },
+    {
+      "cardIndex": 1,
+      "company": "YAMAHA TASHKENT (ООО “SHOWPRO”)",
+      "date": "сегодня",
+      "raw_lines": [
+        "Просмотрен",
+        "Project manager (операционный руководитель маркетинговых проектов)",
+        "YAMAHA TASHKENT (ООО “SHOWPRO”)",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Project manager (операционный руководитель маркетинговых проектов)",
+      "vacancy_id": "138618597",
+      "page": 0
+    },
+    {
+      "cardIndex": 2,
+      "company": "GORILLA ASIA (ГОРИЛЛА АЗИЯ)",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Заместитель главного бухгалтера/Бухгалтер по налогам",
+        "GORILLA ASIA (ГОРИЛЛА АЗИЯ)",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Заместитель главного бухгалтера/Бухгалтер по налогам",
+      "vacancy_id": "138658345",
+      "page": 0
+    },
+    {
+      "cardIndex": 3,
+      "company": "ГУ MILLIY BIOFARMATSEVTIKA ILMIY-TADQIQOT INSTITUTI",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Главный бухгалтер",
+        "ГУ MILLIY BIOFARMATSEVTIKA ILMIY-TADQIQOT INSTITUTI",
+        "сегодня",
+        "Разбирает 28% откликов"
+      ],
+      "title": "Главный бухгалтер",
+      "vacancy_id": "138734405",
+      "page": 0
+    },
+    {
+      "cardIndex": 4,
+      "company": "ООО Ansher Capital",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Генеральный Директор",
+        "ООО Ansher Capital",
+        "сегодня",
+        "Офлайн дольше недели"
+      ],
+      "title": "Генеральный Директор",
+      "vacancy_id": "138782836",
+      "page": 0
+    },
+    {
+      "cardIndex": 5,
+      "company": "Free Style Group",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Chain Manager | Levi's, Cole Haan, Puma",
+        "Free Style Group",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Chain Manager | Levi's, Cole Haan, Puma",
+      "vacancy_id": "138814492",
+      "page": 0
+    },
+    {
+      "cardIndex": 6,
+      "company": "SYNAPSTER",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Менеджер по привлечению мерчантов",
+        "SYNAPSTER",
+        "сегодня",
+        "Был онлайн 5 дней назад"
+      ],
+      "title": "Менеджер по привлечению мерчантов",
+      "vacancy_id": "138849604",
+      "page": 0
+    },
+    {
+      "cardIndex": 7,
+      "company": "СП ООО PPG-PRIME POLYMER GROUP",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель проекта (импорт-экспорт и оптовые продажи подгузников)",
+        "СП ООО PPG-PRIME POLYMER GROUP",
+        "сегодня",
+        "Офлайн дольше недели"
+      ],
+      "title": "Руководитель проекта (импорт-экспорт и оптовые продажи подгузников)",
+      "vacancy_id": "138860879",
+      "page": 0
+    },
+    {
+      "cardIndex": 8,
+      "company": "ZOOMLION HEAVY INDUSTRY SCIENCE AND TECHNOLOGY",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Специалист по взысканию задолженности",
+        "ZOOMLION HEAVY INDUSTRY SCIENCE AND TECHNOLOGY",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Специалист по взысканию задолженности",
+      "vacancy_id": "138910852",
+      "page": 0
+    },
+    {
+      "cardIndex": 9,
+      "company": "UNITED VENTURES",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Venture Associate",
+        "UNITED VENTURES",
+        "сегодня",
+        "Был онлайн 3 дня назад"
+      ],
+      "title": "Venture Associate",
+      "vacancy_id": "138905124",
+      "page": 0
+    },
+    {
+      "cardIndex": 10,
+      "company": "TEZ MASLAHAT MAKONI",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Специалист по кредитованию. Менеджер по продажам.",
+        "TEZ MASLAHAT MAKONI",
+        "сегодня",
+        "Был онлайн 4 дня назад"
+      ],
+      "title": "Специалист по кредитованию. Менеджер по продажам.",
+      "vacancy_id": "138951032",
+      "page": 0
+    },
+    {
+      "cardIndex": 11,
+      "company": "ELCORE DISTRIBUTION CA",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Commercial director",
+        "ELCORE DISTRIBUTION CA",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Commercial director",
+      "vacancy_id": "139048859",
+      "page": 0
+    },
+    {
+      "cardIndex": 12,
+      "company": "ZENITH LEVCOM",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Media Head",
+        "ZENITH LEVCOM",
+        "сегодня",
+        "Офлайн дольше недели"
+      ],
+      "title": "Media Head",
+      "vacancy_id": "139119284",
+      "page": 0
+    },
+    {
+      "cardIndex": 13,
+      "company": "Alfa Monet Group",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Менеджер по маркетплейсам",
+        "Alfa Monet Group",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Менеджер по маркетплейсам",
+      "vacancy_id": "139095675",
+      "page": 0
+    },
+    {
+      "cardIndex": 14,
+      "company": "Perfect balance",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Главный бухгалтер в аутсорс",
+        "Perfect balance",
+        "сегодня",
+        "Был онлайн 5 дней назад"
+      ],
+      "title": "Главный бухгалтер в аутсорс",
+      "vacancy_id": "139240733",
+      "page": 0
+    },
+    {
+      "cardIndex": 15,
+      "company": "LIME MIKROMOLIYA TASHKILOTI",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Кредитный специалист (мониторинг и выдача)",
+        "LIME MIKROMOLIYA TASHKILOTI",
+        "сегодня",
+        "Был онлайн 5 дней назад"
+      ],
+      "title": "Кредитный специалист (мониторинг и выдача)",
+      "vacancy_id": "139259815",
+      "page": 0
+    },
+    {
+      "cardIndex": 16,
+      "company": "Porsche Uzbekistan",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Технический директор",
+        "Porsche Uzbekistan",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Технический директор",
+      "vacancy_id": "139485650",
+      "page": 0
+    },
+    {
+      "cardIndex": 17,
+      "company": "MIRABAT COMFORT",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Бухгалтер",
+        "MIRABAT COMFORT",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Бухгалтер",
+      "vacancy_id": "139487636",
+      "page": 0
+    },
+    {
+      "cardIndex": 18,
+      "company": "VIVAMED CENTER",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Специалист по бизнес-процессам, отчётности и автоматизации — Viva med center (Клиника)",
+        "VIVAMED CENTER",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Специалист по бизнес-процессам, отчётности и автоматизации — Viva med center (Клиника)",
+      "vacancy_id": "138658075",
+      "page": 0
+    },
+    {
+      "cardIndex": 19,
+      "company": "ЧП RIO INTERNATIONAL",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Помощник финансиста",
+        "ЧП RIO INTERNATIONAL",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Помощник финансиста",
+      "vacancy_id": "139023445",
+      "page": 0
+    },
+    {
+      "cardIndex": 0,
+      "company": "SOF GROUP MANAGEMENT LLC",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Financial specialist",
+        "SOF GROUP MANAGEMENT LLC",
+        "сегодня",
+        "Был онлайн 6 дней назад"
+      ],
+      "title": "Financial specialist",
+      "vacancy_id": "138885318",
+      "page": 1
+    },
+    {
+      "cardIndex": 1,
+      "company": "UNICOM DISTRIBUTION",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Finansist",
+        "UNICOM DISTRIBUTION",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Finansist",
+      "vacancy_id": "138862730",
+      "page": 1
+    },
+    {
+      "cardIndex": 2,
+      "company": "Milkolino Products",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Продуктовый маркетолог-аналитик",
+        "Milkolino Products",
+        "сегодня",
+        "Был онлайн 3 дня назад"
+      ],
+      "title": "Продуктовый маркетолог-аналитик",
+      "vacancy_id": "138914174",
+      "page": 1
+    },
+    {
+      "cardIndex": 3,
+      "company": "INSOF",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый менеджер",
+        "INSOF",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "138977647",
+      "page": 1
+    },
+    {
+      "cardIndex": 4,
+      "company": "ICE FRUTS",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Chief financial officer (CFO)",
+        "ICE FRUTS",
+        "сегодня",
+        "Был онлайн 3 дня назад"
+      ],
+      "title": "Chief financial officer (CFO)",
+      "vacancy_id": "139131042",
+      "page": 1
+    },
+    {
+      "cardIndex": 5,
+      "company": "SOF GROUP",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Finance Manager",
+        "SOF GROUP",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Finance Manager",
+      "vacancy_id": "139269925",
+      "page": 1
+    },
+    {
+      "cardIndex": 6,
+      "company": "ATI.SU",
+      "date": "сегодня",
+      "raw_lines": [
+        "Просмотрен",
+        "Представитель IT компании в Узбекистане",
+        "ATI.SU",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Представитель IT компании в Узбекистане",
+      "vacancy_id": "138568948",
+      "page": 1
+    },
+    {
+      "cardIndex": 7,
+      "company": "Erk Makon",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Региональный менеджер по продажам колбасных изделий и мясных деликатесов",
+        "Erk Makon",
+        "сегодня",
+        "Был онлайн 5 дней назад"
+      ],
+      "title": "Региональный менеджер по продажам колбасных изделий и мясных деликатесов",
+      "vacancy_id": "138612791",
+      "page": 1
+    },
+    {
+      "cardIndex": 8,
+      "company": "PRO-STAFF",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Региональный менеджер в фармацевтическую компанию (Ташкент и Ташкентская область)",
+        "PRO-STAFF",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Региональный менеджер в фармацевтическую компанию (Ташкент и Ташкентская область)",
+      "vacancy_id": "138653436",
+      "page": 1
+    },
+    {
+      "cardIndex": 9,
+      "company": "ASBIS CA",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Key Account Manager B2B (Apple)",
+        "ASBIS CA",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Key Account Manager B2B (Apple)",
+      "vacancy_id": "137730320",
+      "page": 1
+    },
+    {
+      "cardIndex": 10,
+      "company": "U-MAX PROPERTIES",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Бренд-менеджер",
+        "U-MAX PROPERTIES",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Бренд-менеджер",
+      "vacancy_id": "137228904",
+      "page": 1
+    },
+    {
+      "cardIndex": 11,
+      "company": "АКБ Тенге Банк",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Начальник управления по развитию транзакционных продуктов",
+        "АКБ Тенге Банк",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Начальник управления по развитию транзакционных продуктов",
+      "vacancy_id": "138610476",
+      "page": 1
+    },
+    {
+      "cardIndex": 12,
+      "company": "FIRST DRY PORT TERMINAL",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Бухгалтер по расчету заработной платы",
+        "FIRST DRY PORT TERMINAL",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Бухгалтер по расчету заработной платы",
+      "vacancy_id": "138693765",
+      "page": 1
+    },
+    {
+      "cardIndex": 13,
+      "company": "AVO.UZ",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель отдела моделирования кредитных рисков",
+        "AVO.UZ",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Руководитель отдела моделирования кредитных рисков",
+      "vacancy_id": "138592440",
+      "page": 1
+    },
+    {
+      "cardIndex": 14,
+      "company": "TBC OPERATIONS",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Кредитный специалист (Ташкент)",
+        "TBC OPERATIONS",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Кредитный специалист (Ташкент)",
+      "vacancy_id": "137933748",
+      "page": 1
+    },
+    {
+      "cardIndex": 15,
+      "company": "SAPHIR DISTRIBUTION CO",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Операционный директор (COO)",
+        "SAPHIR DISTRIBUTION CO",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Операционный директор (COO)",
+      "vacancy_id": "137702084",
+      "page": 1
+    },
+    {
+      "cardIndex": 16,
+      "company": "Ipotekabank OTP Group",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Менеджер по работе с клиентами (Relationship Manager) (МСБ)",
+        "Ipotekabank OTP Group",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Менеджер по работе с клиентами (Relationship Manager) (МСБ)",
+      "vacancy_id": "138709299",
+      "page": 1
+    },
+    {
+      "cardIndex": 17,
+      "company": "Международная компания",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Senior Product Manager (маркетплейс)",
+        "Международная компания",
+        "сегодня",
+        "Перейти в чат"
+      ],
+      "title": "Senior Product Manager (маркетплейс)",
+      "vacancy_id": "138740950",
+      "page": 1
+    },
+    {
+      "cardIndex": 18,
+      "company": "ASTERIUM",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель отдела клиринговых операций (финтех / крипто)",
+        "ASTERIUM",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Руководитель отдела клиринговых операций (финтех / крипто)",
+      "vacancy_id": "136681624",
+      "page": 1
+    },
+    {
+      "cardIndex": 19,
+      "company": "АКБ Агробанк",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Senior Product Manager",
+        "АКБ Агробанк",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Senior Product Manager",
+      "vacancy_id": "138733360",
+      "page": 1
+    },
+    {
+      "cardIndex": 0,
+      "company": "Ipotekabank OTP Group",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Менеджер по работе с зарплатными проектами",
+        "Ipotekabank OTP Group",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Менеджер по работе с зарплатными проектами",
+      "vacancy_id": "139480599",
+      "page": 2
+    },
+    {
+      "cardIndex": 1,
+      "company": "EY Uzbekistan",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Staff in Financial Accounting Advisory Services",
+        "EY Uzbekistan",
+        "сегодня",
+        "Офлайн дольше недели"
+      ],
+      "title": "Staff in Financial Accounting Advisory Services",
+      "vacancy_id": "135768174",
+      "page": 2
+    },
+    {
+      "cardIndex": 2,
+      "company": "ASTERIUM",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Head of Finance Analytics Department",
+        "ASTERIUM",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Head of Finance Analytics Department",
+      "vacancy_id": "138687246",
+      "page": 2
+    },
+    {
+      "cardIndex": 3,
+      "company": "СOMPASS MANAGEMENT",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Директор транспортной компании",
+        "СOMPASS MANAGEMENT",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Директор транспортной компании",
+      "vacancy_id": "138805773",
+      "page": 2
+    },
+    {
+      "cardIndex": 4,
+      "company": "KHAN BARAKA DECOR",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Генеральный директор \\ CEO",
+        "KHAN BARAKA DECOR",
+        "сегодня",
+        "Офлайн дольше недели"
+      ],
+      "title": "Генеральный директор \\ CEO",
+      "vacancy_id": "138805420",
+      "page": 2
+    },
+    {
+      "cardIndex": 5,
+      "company": "Juru",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Senior Policy and Economic Analyst",
+        "Juru",
+        "сегодня",
+        "Офлайн дольше недели"
+      ],
+      "title": "Senior Policy and Economic Analyst",
+      "vacancy_id": "138795037",
+      "page": 2
+    },
+    {
+      "cardIndex": 6,
+      "company": "ROODELL",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Ведущий аудитор",
+        "ROODELL",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Ведущий аудитор",
+      "vacancy_id": "138454665",
+      "page": 2
+    },
+    {
+      "cardIndex": 7,
+      "company": "EVOS",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Делопроизводитель",
+        "EVOS",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Делопроизводитель",
+      "vacancy_id": "138774900",
+      "page": 2
+    },
+    {
+      "cardIndex": 8,
+      "company": "EVOS",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Офис-менеджер",
+        "EVOS",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Офис-менеджер",
+      "vacancy_id": "138821629",
+      "page": 2
+    },
+    {
+      "cardIndex": 9,
+      "company": "EVOS",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "АДМИНИСТРАТИВНЫЙ ПОМОЩНИК / ПОМОЩНИК РУКОВОДИТЕЛЯ",
+        "EVOS",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "АДМИНИСТРАТИВНЫЙ ПОМОЩНИК / ПОМОЩНИК РУКОВОДИТЕЛЯ",
+      "vacancy_id": "139007263",
+      "page": 2
+    },
+    {
+      "cardIndex": 10,
+      "company": "EVOS",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Менеджер по лицензионным промо",
+        "EVOS",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Менеджер по лицензионным промо",
+      "vacancy_id": "137946046",
+      "page": 2
+    },
+    {
+      "cardIndex": 11,
+      "company": "KEYSOFT",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Главный бухгалтер",
+        "KEYSOFT",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Главный бухгалтер",
+      "vacancy_id": "138197490",
+      "page": 2
+    },
+    {
+      "cardIndex": 12,
+      "company": "Sarkor Telekom",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель отдела продуктов B2B",
+        "Sarkor Telekom",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Руководитель отдела продуктов B2B",
+      "vacancy_id": "138820079",
+      "page": 2
+    },
+    {
+      "cardIndex": 13,
+      "company": "BAICHENG TASHKENT",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Главный бухгалтер",
+        "BAICHENG TASHKENT",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Главный бухгалтер",
+      "vacancy_id": "138821750",
+      "page": 2
+    },
+    {
+      "cardIndex": 14,
+      "company": "ISHONCH",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Head of HR (офис)",
+        "ISHONCH",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Head of HR (офис)",
+      "vacancy_id": "138877078",
+      "page": 2
+    },
+    {
+      "cardIndex": 15,
+      "company": "СП ООО Havas food",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Коммерческий директор (FMCG, фасовка и дистрибуция)",
+        "СП ООО Havas food",
+        "сегодня",
+        "Был онлайн 3 дня назад"
+      ],
+      "title": "Коммерческий директор (FMCG, фасовка и дистрибуция)",
+      "vacancy_id": "138856637",
+      "page": 2
+    },
+    {
+      "cardIndex": 16,
+      "company": "АКБ Агробанк",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "NLP Team Lead (AI / LLM)",
+        "АКБ Агробанк",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "NLP Team Lead (AI / LLM)",
+      "vacancy_id": "131895759",
+      "page": 2
+    },
+    {
+      "cardIndex": 17,
+      "company": "MITTIVOYGROUP",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель направления категорийного менеджмента (FMCG)",
+        "MITTIVOYGROUP",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Руководитель направления категорийного менеджмента (FMCG)",
+      "vacancy_id": "138844918",
+      "page": 2
+    },
+    {
+      "cardIndex": 18,
+      "company": "NETWORK MEDIA",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Account manager (медийное агентство, client service / media / рекламное)",
+        "NETWORK MEDIA",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Account manager (медийное агентство, client service / media / рекламное)",
+      "vacancy_id": "132150409",
+      "page": 2
+    },
+    {
+      "cardIndex": 19,
+      "company": "АИКБ ИПАК ЙУЛИ БАНК",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Специалист по кредитованию МСБ (Шайхантахурский филиал)",
+        "АИКБ ИПАК ЙУЛИ БАНК",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Специалист по кредитованию МСБ (Шайхантахурский филиал)",
+      "vacancy_id": "138827044",
+      "page": 2
+    },
+    {
+      "cardIndex": 0,
+      "company": "AZIMUTH (ООО TECHNOLOGIES OF REAL TIME)",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Коммерческий директор/CCO/Chief Commercial Officer (производство, B2B, экспорт)",
+        "AZIMUTH (ООО TECHNOLOGIES OF REAL TIME)",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Коммерческий директор/CCO/Chief Commercial Officer (производство, B2B, экспорт)",
+      "vacancy_id": "137360472",
+      "page": 3
+    },
+    {
+      "cardIndex": 1,
+      "company": "NETWORK MEDIA",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "TV Buyer",
+        "NETWORK MEDIA",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "TV Buyer",
+      "vacancy_id": "137836992",
+      "page": 3
+    },
+    {
+      "cardIndex": 2,
+      "company": "ASTERIUM",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Head of Daily Banking",
+        "ASTERIUM",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Head of Daily Banking",
+      "vacancy_id": "138862156",
+      "page": 3
+    },
+    {
+      "cardIndex": 3,
+      "company": "ООО ASTANA MOTORS COMPANY",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель отдела продаж",
+        "ООО ASTANA MOTORS COMPANY",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Руководитель отдела продаж",
+      "vacancy_id": "138910610",
+      "page": 3
+    },
+    {
+      "cardIndex": 4,
+      "company": "Smart Solutions Personnel",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Представитель в торговых точках",
+        "Smart Solutions Personnel",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Представитель в торговых точках",
+      "vacancy_id": "138960876",
+      "page": 3
+    },
+    {
+      "cardIndex": 5,
+      "company": "ПУ PricewaterhouseCoopers Central Asia and Caucasus B.V.",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Бухгалтер",
+        "ПУ PricewaterhouseCoopers Central Asia and Caucasus B.V.",
+        "сегодня",
+        "Был онлайн 3 дня назад"
+      ],
+      "title": "Бухгалтер",
+      "vacancy_id": "138892702",
+      "page": 3
+    },
+    {
+      "cardIndex": 6,
+      "company": "ООО Нестле Фуд",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый Контролер по продажам/ Financial Sales Controller",
+        "ООО Нестле Фуд",
+        "сегодня",
+        "Был онлайн 4 дня назад"
+      ],
+      "title": "Финансовый Контролер по продажам/ Financial Sales Controller",
+      "vacancy_id": "139135206",
+      "page": 3
+    },
+    {
+      "cardIndex": 7,
+      "company": "ООО Нестле Фуд",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Главный Бухгалтер (Chief Accountant)",
+        "ООО Нестле Фуд",
+        "сегодня",
+        "Был онлайн 4 дня назад"
+      ],
+      "title": "Главный Бухгалтер (Chief Accountant)",
+      "vacancy_id": "138905411",
+      "page": 3
+    },
+    {
+      "cardIndex": 8,
+      "company": "SMART HR",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Директор по развитию сети ресторанов (Restaurant Development Director)",
+        "SMART HR",
+        "сегодня",
+        "Был онлайн 4 дня назад"
+      ],
+      "title": "Директор по развитию сети ресторанов (Restaurant Development Director)",
+      "vacancy_id": "138961236",
+      "page": 3
+    },
+    {
+      "cardIndex": 9,
+      "company": "EY Uzbekistan",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Intern in Project Finance & infrastructure, Strategy&Transaction (PFI)",
+        "EY Uzbekistan",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Intern in Project Finance & infrastructure, Strategy&Transaction (PFI)",
+      "vacancy_id": "138869569",
+      "page": 3
+    },
+    {
+      "cardIndex": 10,
+      "company": "Формула 55",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель коммерческого департамента",
+        "Формула 55",
+        "сегодня",
+        "Был онлайн 3 дня назад"
+      ],
+      "title": "Руководитель коммерческого департамента",
+      "vacancy_id": "138973109",
+      "page": 3
+    },
+    {
+      "cardIndex": 11,
+      "company": "EPG-POS",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель отдела продаж /Директор по продажам/Head of sales/РОП",
+        "EPG-POS",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Руководитель отдела продаж /Директор по продажам/Head of sales/РОП",
+      "vacancy_id": "139011043",
+      "page": 3
+    },
+    {
+      "cardIndex": 12,
+      "company": "Variant Retail Finance",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Начальник отдела по работе с просроченной задолженностью (Hard Collection)",
+        "Variant Retail Finance",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Начальник отдела по работе с просроченной задолженностью (Hard Collection)",
+      "vacancy_id": "139015012",
+      "page": 3
+    },
+    {
+      "cardIndex": 13,
+      "company": "ZIYNAT MOLIYA",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Менеджер по продажам",
+        "ZIYNAT MOLIYA",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по продажам",
+      "vacancy_id": "139029741",
+      "page": 3
+    },
+    {
+      "cardIndex": 14,
+      "company": "Брайт Эйдженси",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Инженер по машинному обучению (ML-инженер)",
+        "Брайт Эйдженси",
+        "сегодня",
+        "Был онлайн 4 дня назад"
+      ],
+      "title": "Инженер по машинному обучению (ML-инженер)",
+      "vacancy_id": "139058496",
+      "page": 3
+    },
+    {
+      "cardIndex": 15,
+      "company": "KEYSOFT",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "ТЭО/ТЭР писатель (в Ташкент)",
+        "KEYSOFT",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "ТЭО/ТЭР писатель (в Ташкент)",
+      "vacancy_id": "138154133",
+      "page": 3
+    },
+    {
+      "cardIndex": 16,
+      "company": "БСФ (ТМ РАДУГА)",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Региональный представитель",
+        "БСФ (ТМ РАДУГА)",
+        "сегодня",
+        "Был онлайн 4 дня назад"
+      ],
+      "title": "Региональный представитель",
+      "vacancy_id": "139128679",
+      "page": 3
+    },
+    {
+      "cardIndex": 17,
+      "company": "Fersol",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Senior Leasing Consultant",
+        "Fersol",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Senior Leasing Consultant",
+      "vacancy_id": "139074335",
+      "page": 3
+    },
+    {
+      "cardIndex": 18,
+      "company": "ООО «KPMG AUDIT»",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Executive, Fixed Assets/Deal Advisory",
+        "ООО «KPMG AUDIT»",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Executive, Fixed Assets/Deal Advisory",
+      "vacancy_id": "139097176",
+      "page": 3
+    },
+    {
+      "cardIndex": 19,
+      "company": "ООО «KPMG AUDIT»",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Executive, Transaction Services/Deal Advisory",
+        "ООО «KPMG AUDIT»",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Executive, Transaction Services/Deal Advisory",
+      "vacancy_id": "139103499",
+      "page": 3
+    },
+    {
+      "cardIndex": 0,
+      "company": "UZUM TECHNOLOGIES. IT",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "PL/SQL Developer",
+        "UZUM TECHNOLOGIES. IT",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "PL/SQL Developer",
+      "vacancy_id": "139132022",
+      "page": 4
+    },
+    {
+      "cardIndex": 1,
+      "company": "Bolter",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель отдела продаж",
+        "Bolter",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Руководитель отдела продаж",
+      "vacancy_id": "138256953",
+      "page": 4
+    },
+    {
+      "cardIndex": 2,
+      "company": "UNITEL LLC",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Head of Customer Value Management & Customer Experience",
+        "UNITEL LLC",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Head of Customer Value Management & Customer Experience",
+      "vacancy_id": "139169024",
+      "page": 4
+    },
+    {
+      "cardIndex": 3,
+      "company": "DREAMLIFE",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Sotuv xodimlari",
+        "DREAMLIFE",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Sotuv xodimlari",
+      "vacancy_id": "139229594",
+      "page": 4
+    },
+    {
+      "cardIndex": 4,
+      "company": "ANNEXURE",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Заместитель директора",
+        "ANNEXURE",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Заместитель директора",
+      "vacancy_id": "138952136",
+      "page": 4
+    },
+    {
+      "cardIndex": 5,
+      "company": "EY Uzbekistan",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Senior Consultant in Strategy & Execution (Corporate Strategy)",
+        "EY Uzbekistan",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Senior Consultant in Strategy & Execution (Corporate Strategy)",
+      "vacancy_id": "139234666",
+      "page": 4
+    },
+    {
+      "cardIndex": 6,
+      "company": "NILSTROY HOLDING",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель отдела продаж",
+        "NILSTROY HOLDING",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Руководитель отдела продаж",
+      "vacancy_id": "139268921",
+      "page": 4
+    },
+    {
+      "cardIndex": 7,
+      "company": "Murad Buildings",
+      "date": "сегодня",
+      "raw_lines": [
+        "Просмотрен",
+        "Руководитель управления инженерно-экономического сопровождения (Head of Cost Management)",
+        "Murad Buildings",
+        "сегодня",
+        "Разбирает 89% откликов"
+      ],
+      "title": "Руководитель управления инженерно-экономического сопровождения (Head of Cost Management)",
+      "vacancy_id": "139266462",
+      "page": 4
+    },
+    {
+      "cardIndex": 8,
+      "company": "Antal International Tashkent Xususiy Bandlik Agentligi",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Head of Product",
+        "Antal International Tashkent Xususiy Bandlik Agentligi",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Head of Product",
+      "vacancy_id": "137419489",
+      "page": 4
+    },
+    {
+      "cardIndex": 9,
+      "company": "BOSTON OIL TRADE (Uztobacco)",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель HR-отдела",
+        "BOSTON OIL TRADE (Uztobacco)",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Руководитель HR-отдела",
+      "vacancy_id": "139452517",
+      "page": 4
+    },
+    {
+      "cardIndex": 10,
+      "company": "EXZAP",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель группы фактурирования",
+        "EXZAP",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Руководитель группы фактурирования",
+      "vacancy_id": "139452590",
+      "page": 4
+    },
+    {
+      "cardIndex": 11,
+      "company": "ANCOR Uzbekistan",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Менеджер по развитию партнерской сети / Key Account Manager",
+        "ANCOR Uzbekistan",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Менеджер по развитию партнерской сети / Key Account Manager",
+      "vacancy_id": "139455567",
+      "page": 4
+    },
+    {
+      "cardIndex": 12,
+      "company": "OOO FILIGRAN INC",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Региональный менеджер по продажам (FMCG)",
+        "OOO FILIGRAN INC",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Региональный менеджер по продажам (FMCG)",
+      "vacancy_id": "139493752",
+      "page": 4
+    },
+    {
+      "cardIndex": 13,
+      "company": "Asman JV LLC",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Менеджер Автосалона (РОП)",
+        "Asman JV LLC",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Менеджер Автосалона (РОП)",
+      "vacancy_id": "139469708",
+      "page": 4
+    },
+    {
+      "cardIndex": 14,
+      "company": "MARYAM DENTIST",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Управляющий стоматологической клиникой Dynasty",
+        "MARYAM DENTIST",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Управляющий стоматологической клиникой Dynasty",
+      "vacancy_id": "139494560",
+      "page": 4
+    },
+    {
+      "cardIndex": 15,
+      "company": "UZTRANSFORMATOR",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Начальник отдела продаж",
+        "UZTRANSFORMATOR",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Начальник отдела продаж",
+      "vacancy_id": "139243395",
+      "page": 4
+    },
+    {
+      "cardIndex": 16,
+      "company": "Contab",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Преподаватель международной программы ACCA в ТОЧКУ РОСТА",
+        "Contab",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Преподаватель международной программы ACCA в ТОЧКУ РОСТА",
+      "vacancy_id": "139477524",
+      "page": 4
+    },
+    {
+      "cardIndex": 17,
+      "company": "CORE TECHNOLOGY",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Junior Data Engineer/Младший инженер данных",
+        "CORE TECHNOLOGY",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Junior Data Engineer/Младший инженер данных",
+      "vacancy_id": "137837424",
+      "page": 4
+    },
+    {
+      "cardIndex": 18,
+      "company": "PONAEHALITASH",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель отдела продаж",
+        "PONAEHALITASH",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Руководитель отдела продаж",
+      "vacancy_id": "139020533",
+      "page": 4
+    },
+    {
+      "cardIndex": 19,
+      "company": "YATT KARSHIYEV NURIDDIN NAMAZOVICH",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель отдела продаж",
+        "YATT KARSHIYEV NURIDDIN NAMAZOVICH",
+        "сегодня",
+        "Офлайн дольше недели"
+      ],
+      "title": "Руководитель отдела продаж",
+      "vacancy_id": "138577973",
+      "page": 4
+    },
+    {
+      "cardIndex": 0,
+      "company": "AN SERGEY VIKTOROVICH",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Директор отделов продаж",
+        "AN SERGEY VIKTOROVICH",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Директор отделов продаж",
+      "vacancy_id": "139198704",
+      "page": 5
+    },
+    {
+      "cardIndex": 1,
+      "company": "FlexSoft",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Директор по продажам (B2B, финтех)",
+        "FlexSoft",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Директор по продажам (B2B, финтех)",
+      "vacancy_id": "137837613",
+      "page": 5
+    },
+    {
+      "cardIndex": 2,
+      "company": "ИП ООО Xalq Retail",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Руководитель направления C&B",
+        "ИП ООО Xalq Retail",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Руководитель направления C&B",
+      "vacancy_id": "139188672",
+      "page": 5
+    },
+    {
+      "cardIndex": 3,
+      "company": "MUDARRIS AKADEMIYA",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Операционный менеджер",
+        "MUDARRIS AKADEMIYA",
+        "сегодня",
+        "Разбирает 59% откликов"
+      ],
+      "title": "Операционный менеджер",
+      "vacancy_id": "139493834",
+      "page": 5
+    },
+    {
+      "cardIndex": 4,
+      "company": "Octobank.Контролирующее подразделение",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Риск-менеджер по управлению рыночными и ликвидными рисками",
+        "Octobank.Контролирующее подразделение",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Риск-менеджер по управлению рыночными и ликвидными рисками",
+      "vacancy_id": "138863773",
+      "page": 5
+    },
+    {
+      "cardIndex": 5,
+      "company": "INCOTRUCK",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый директор (CFO)",
+        "INCOTRUCK",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Финансовый директор (CFO)",
+      "vacancy_id": "139347079",
+      "page": 5
+    },
+    {
+      "cardIndex": 6,
+      "company": "ELMAS HALI",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Маркетолог- аналитик",
+        "ELMAS HALI",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Маркетолог- аналитик",
+      "vacancy_id": "139262260",
+      "page": 5
+    },
+    {
+      "cardIndex": 7,
+      "company": "PROFESSIONAL WATER MANAGEMENT",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Finansist",
+        "PROFESSIONAL WATER MANAGEMENT",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Finansist",
+      "vacancy_id": "138431976",
+      "page": 5
+    },
+    {
+      "cardIndex": 8,
+      "company": "COSCOM ТМ Ucell",
+      "date": "сегодня",
+      "raw_lines": [
+        "Просмотрен",
+        "Руководитель по коммерческой аналитике",
+        "COSCOM ТМ Ucell",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Руководитель по коммерческой аналитике",
+      "vacancy_id": "139466752",
+      "page": 5
+    },
+    {
+      "cardIndex": 9,
+      "company": "ELMAS HALI",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Маркетолог- аналитик",
+        "ELMAS HALI",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Маркетолог- аналитик",
+      "vacancy_id": "139262260",
+      "page": 5
+    },
+    {
+      "cardIndex": 10,
+      "company": "SOCIAL PRIMARY CARE",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Специалист финансового отдела (1С)",
+        "SOCIAL PRIMARY CARE",
+        "сегодня",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Специалист финансового отдела (1С)",
+      "vacancy_id": "138587378",
+      "page": 5
+    },
+    {
+      "cardIndex": 11,
+      "company": "AJ “O'zTMK”",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Главный специалист по бюджетированию",
+        "AJ “O'zTMK”",
+        "сегодня",
+        "Был онлайн вчера"
+      ],
+      "title": "Главный специалист по бюджетированию",
+      "vacancy_id": "138708329",
+      "page": 5
+    },
+    {
+      "cardIndex": 12,
+      "company": "ООО Ansher Capital",
+      "date": "сегодня",
+      "raw_lines": [
+        "Не просмотрен",
+        "Investment Associate (Equity Research & Transaction Execution)",
+        "ООО Ansher Capital",
+        "сегодня",
+        "Офлайн дольше недели"
+      ],
+      "title": "Investment Associate (Equity Research & Transaction Execution)",
+      "vacancy_id": "138840965",
+      "page": 5
+    },
+    {
+      "cardIndex": 13,
+      "company": "LEGION CO",
+      "date": "сегодня",
+      "raw_lines": [
+        "Отказ",
+        "Финансовый аналитик",
+        "LEGION CO",
+        "сегодня",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый аналитик",
+      "vacancy_id": "138717882",
+      "page": 5
+    },
+    {
+      "cardIndex": 14,
+      "company": "Delоitte&Touche",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Manager in Audit Department",
+        "Delоitte&Touche",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Manager in Audit Department",
+      "vacancy_id": "137918263",
+      "page": 5
+    },
+    {
+      "cardIndex": 15,
+      "company": "MESMER-EAST",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Стажёр отдела развития бизнеса (Business Development Intern)",
+        "MESMER-EAST",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Стажёр отдела развития бизнеса (Business Development Intern)",
+      "vacancy_id": "138955564",
+      "page": 5
+    },
+    {
+      "cardIndex": 16,
+      "company": "BLACKPILAF (ТМ Besh Qozon)",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Операционный директор (COO)",
+        "BLACKPILAF (ТМ Besh Qozon)",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Операционный директор (COO)",
+      "vacancy_id": "139011141",
+      "page": 5
+    },
+    {
+      "cardIndex": 17,
+      "company": "Garant bank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Начальник управления розничного бизнеса",
+        "Garant bank",
+        "вчера",
+        "Был онлайн сегодня"
+      ],
+      "title": "Начальник управления розничного бизнеса",
+      "vacancy_id": "139013238",
+      "page": 5
+    },
+    {
+      "cardIndex": 18,
+      "company": "АКБ Агробанк",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "PMO Methodologist / Benefits Realization Lead (Методолог)",
+        "АКБ Агробанк",
+        "вчера",
+        "Офлайн дольше недели"
+      ],
+      "title": "PMO Methodologist / Benefits Realization Lead (Методолог)",
+      "vacancy_id": "139481954",
+      "page": 5
+    },
+    {
+      "cardIndex": 19,
+      "company": "ИП ООО SANY AUTOMOBILE MANUFACTURING CENTRAL ASIA",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Бухгалтер",
+        "ИП ООО SANY AUTOMOBILE MANUFACTURING CENTRAL ASIA",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Бухгалтер",
+      "vacancy_id": "139479004",
+      "page": 5
+    },
+    {
+      "cardIndex": 0,
+      "company": "Aloqabank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+        "Aloqabank",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+      "vacancy_id": "139474675",
+      "page": 6
+    },
+    {
+      "cardIndex": 1,
+      "company": "Murad Buildings",
+      "date": "вчера",
+      "raw_lines": [
+        "Просмотрен",
+        "Специалист по контролю затрат (Cost control manager)",
+        "Murad Buildings",
+        "вчера",
+        "Был онлайн сегодня"
+      ],
+      "title": "Специалист по контролю затрат (Cost control manager)",
+      "vacancy_id": "139450932",
+      "page": 6
+    },
+    {
+      "cardIndex": 2,
+      "company": "ООО МФО TAYAN",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Главный бухгалтер TAYAN МКО",
+        "ООО МФО TAYAN",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Главный бухгалтер TAYAN МКО",
+      "vacancy_id": "139463422",
+      "page": 6
+    },
+    {
+      "cardIndex": 3,
+      "company": "АКБ Агробанк",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Strategy Analyst / Business Analyst / PMO Reporting Analyst (Аналитик)",
+        "АКБ Агробанк",
+        "вчера",
+        "Офлайн дольше недели"
+      ],
+      "title": "Strategy Analyst / Business Analyst / PMO Reporting Analyst (Аналитик)",
+      "vacancy_id": "139481478",
+      "page": 6
+    },
+    {
+      "cardIndex": 4,
+      "company": "Aloqabank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+        "Aloqabank",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+      "vacancy_id": "139474675",
+      "page": 6
+    },
+    {
+      "cardIndex": 5,
+      "company": "Aloqabank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+        "Aloqabank",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+      "vacancy_id": "139474675",
+      "page": 6
+    },
+    {
+      "cardIndex": 6,
+      "company": "Aloqabank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+        "Aloqabank",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+      "vacancy_id": "139474675",
+      "page": 6
+    },
+    {
+      "cardIndex": 7,
+      "company": "Aloqabank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+        "Aloqabank",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+      "vacancy_id": "139474675",
+      "page": 6
+    },
+    {
+      "cardIndex": 8,
+      "company": "Aloqabank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+        "Aloqabank",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+      "vacancy_id": "139474675",
+      "page": 6
+    },
+    {
+      "cardIndex": 9,
+      "company": "ASBIS CA",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Key Account Manager E-commerce",
+        "ASBIS CA",
+        "12 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Key Account Manager E-commerce",
+      "vacancy_id": "138220676",
+      "page": 6
+    },
+    {
+      "cardIndex": 10,
+      "company": "Aloqabank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+        "Aloqabank",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+      "vacancy_id": "139474675",
+      "page": 6
+    },
+    {
+      "cardIndex": 11,
+      "company": "Aloqabank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+        "Aloqabank",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+      "vacancy_id": "139474675",
+      "page": 6
+    },
+    {
+      "cardIndex": 12,
+      "company": "Aloqabank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+        "Aloqabank",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+      "vacancy_id": "139474675",
+      "page": 6
+    },
+    {
+      "cardIndex": 13,
+      "company": "UNITEL LLC",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Менеджер по стратегическому развитию фиксированного бизнеса",
+        "UNITEL LLC",
+        "12 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по стратегическому развитию фиксированного бизнеса",
+      "vacancy_id": "139136325",
+      "page": 6
+    },
+    {
+      "cardIndex": 14,
+      "company": "Aloqabank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+        "Aloqabank",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+      "vacancy_id": "139474675",
+      "page": 6
+    },
+    {
+      "cardIndex": 15,
+      "company": "AJ “O'zTMK”",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Главный специалист сектора операционной эффективности",
+        "AJ “O'zTMK”",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Главный специалист сектора операционной эффективности",
+      "vacancy_id": "139152447",
+      "page": 6
+    },
+    {
+      "cardIndex": 16,
+      "company": "OPEN BANK AJ",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Директор по маркетингу (Chief Marketing Officer)",
+        "OPEN BANK AJ",
+        "12 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Директор по маркетингу (Chief Marketing Officer)",
+      "vacancy_id": "139188607",
+      "page": 6
+    },
+    {
+      "cardIndex": 17,
+      "company": "Orient Finans Bank",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Руководитель Центра управления проектами",
+        "Orient Finans Bank",
+        "12 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Руководитель Центра управления проектами",
+      "vacancy_id": "138777998",
+      "page": 6
+    },
+    {
+      "cardIndex": 18,
+      "company": "ГЕТ ЭКСПЕРТС РЕКРУТМЕНТ",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Директор по цепочке поставок / Supply Chain Director",
+        "ГЕТ ЭКСПЕРТС РЕКРУТМЕНТ",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Директор по цепочке поставок / Supply Chain Director",
+      "vacancy_id": "139309698",
+      "page": 6
+    },
+    {
+      "cardIndex": 19,
+      "company": "Aloqabank",
+      "date": "вчера",
+      "raw_lines": [
+        "Не просмотрен",
+        "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+        "Aloqabank",
+        "вчера",
+        "Был онлайн 2 дня назад"
+      ],
+      "title": "Moliyaviy xizmat departamenti direktori (CFO) – Bosh buxgalter",
+      "vacancy_id": "139474675",
+      "page": 6
+    },
+    {
+      "cardIndex": 0,
+      "company": "OSMAN Group",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый менеджер",
+        "OSMAN Group",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "139299597",
+      "page": 7
+    },
+    {
+      "cardIndex": 1,
+      "company": "KD NATURAL FOOD GROUP",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Собеседование",
+        "Финансовый контролер",
+        "KD NATURAL FOOD GROUP",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый контролер",
+      "vacancy_id": "139347899",
+      "page": 7
+    },
+    {
+      "cardIndex": 2,
+      "company": "OSMAN Group",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый менеджер",
+        "OSMAN Group",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "139299597",
+      "page": 7
+    },
+    {
+      "cardIndex": 3,
+      "company": "OSMAN Group",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый менеджер",
+        "OSMAN Group",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "139299597",
+      "page": 7
+    },
+    {
+      "cardIndex": 4,
+      "company": "НОУ Thompson Drujba",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый аналитик",
+        "НОУ Thompson Drujba",
+        "12 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый аналитик",
+      "vacancy_id": "138571271",
+      "page": 7
+    },
+    {
+      "cardIndex": 5,
+      "company": "KADIROV DONIYOR SADIKOVICH",
+      "date": "11 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый аналитик/аудитор",
+        "KADIROV DONIYOR SADIKOVICH",
+        "11 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый аналитик/аудитор",
+      "vacancy_id": "139024885",
+      "page": 7
+    },
+    {
+      "cardIndex": 6,
+      "company": "OSMAN Group",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый менеджер",
+        "OSMAN Group",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "139299597",
+      "page": 7
+    },
+    {
+      "cardIndex": 7,
+      "company": "OSMAN Group",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый менеджер",
+        "OSMAN Group",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "139299597",
+      "page": 7
+    },
+    {
+      "cardIndex": 8,
+      "company": "OSMAN Group",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый менеджер",
+        "OSMAN Group",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "139299597",
+      "page": 7
+    },
+    {
+      "cardIndex": 9,
+      "company": "TBC OPERATIONS",
+      "date": "11 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Credit Risk Analyst",
+        "TBC OPERATIONS",
+        "11 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Credit Risk Analyst",
+      "vacancy_id": "138704486",
+      "page": 7
+    },
+    {
+      "cardIndex": 10,
+      "company": "ROODELL",
+      "date": "11 ноября",
+      "raw_lines": [
+        "Собеседование",
+        "Менеджер по продажам финансовых услуг (Клоузер)",
+        "ROODELL",
+        "11 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по продажам финансовых услуг (Клоузер)",
+      "vacancy_id": "138713260",
+      "page": 7
+    },
+    {
+      "cardIndex": 11,
+      "company": "ROODELL",
+      "date": "11 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по бизнес-консалтингу",
+        "ROODELL",
+        "11 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по бизнес-консалтингу",
+      "vacancy_id": "137572400",
+      "page": 7
+    },
+    {
+      "cardIndex": 12,
+      "company": "OSMAN Group",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый менеджер",
+        "OSMAN Group",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "139299597",
+      "page": 7
+    },
+    {
+      "cardIndex": 13,
+      "company": "UZUM TECHNOLOGIES. Операции",
+      "date": "11 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Бизнес-аналитик",
+        "UZUM TECHNOLOGIES. Операции",
+        "11 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Бизнес-аналитик",
+      "vacancy_id": "127868561",
+      "page": 7
+    },
+    {
+      "cardIndex": 14,
+      "company": "OSMAN Group",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый менеджер",
+        "OSMAN Group",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "139299597",
+      "page": 7
+    },
+    {
+      "cardIndex": 15,
+      "company": "OSMAN Group",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый менеджер",
+        "OSMAN Group",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "139299597",
+      "page": 7
+    },
+    {
+      "cardIndex": 16,
+      "company": "Candy gold",
+      "date": "11 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Финансовый аналитик (производство)",
+        "Candy gold",
+        "11 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый аналитик (производство)",
+      "vacancy_id": "139210280",
+      "page": 7
+    },
+    {
+      "cardIndex": 17,
+      "company": "Dimako Slovakia s.r.o.",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Dispatcher/Logistics Coordinator at a European Transport Company",
+        "Dimako Slovakia s.r.o.",
+        "10 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Dispatcher/Logistics Coordinator at a European Transport Company",
+      "vacancy_id": "139081325",
+      "page": 7
+    },
+    {
+      "cardIndex": 18,
+      "company": "OSMAN Group",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый менеджер",
+        "OSMAN Group",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "139299597",
+      "page": 7
+    },
+    {
+      "cardIndex": 19,
+      "company": "OSMAN Group",
+      "date": "12 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Финансовый менеджер",
+        "OSMAN Group",
+        "12 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый менеджер",
+      "vacancy_id": "139299597",
+      "page": 7
+    },
+    {
+      "cardIndex": 0,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 1,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 2,
+      "company": "HamkorBank",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по работе с международными исламскими финансовыми институтами (Привлечение)",
+        "HamkorBank",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по работе с международными исламскими финансовыми институтами (Привлечение)",
+      "vacancy_id": "139211827",
+      "page": 8
+    },
+    {
+      "cardIndex": 3,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 4,
+      "company": "ИП ООО Xalq Retail",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Помощник категорийного менеджера",
+        "ИП ООО Xalq Retail",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Помощник категорийного менеджера",
+      "vacancy_id": "138904005",
+      "page": 8
+    },
+    {
+      "cardIndex": 5,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 6,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 7,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 8,
+      "company": "UzCarlsberg",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Финансовый аналитик",
+        "UzCarlsberg",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый аналитик",
+      "vacancy_id": "139134530",
+      "page": 8
+    },
+    {
+      "cardIndex": 9,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 10,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 11,
+      "company": "KASH NETWORKS",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Sales Agent of Airlines tickets in the United States (Night Shift) 6/1",
+        "KASH NETWORKS",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Sales Agent of Airlines tickets in the United States (Night Shift) 6/1",
+      "vacancy_id": "137409596",
+      "page": 8
+    },
+    {
+      "cardIndex": 12,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 13,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 14,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 15,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 16,
+      "company": "НОУ JUST EDU GROUP",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Администратор-менеджер (в учебный центр)",
+        "НОУ JUST EDU GROUP",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Администратор-менеджер (в учебный центр)",
+      "vacancy_id": "138911526",
+      "page": 8
+    },
+    {
+      "cardIndex": 17,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 18,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 19,
+      "company": "AKFA BUILDING MATERIALS. Закупки и логистика",
+      "date": "10 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Менеджер по импорту",
+        "AKFA BUILDING MATERIALS. Закупки и логистика",
+        "10 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по импорту",
+      "vacancy_id": "138664219",
+      "page": 8
+    },
+    {
+      "cardIndex": 0,
+      "company": "Healthy Home Uz",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый ассистент",
+        "Healthy Home Uz",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый ассистент",
+      "vacancy_id": "138908517",
+      "page": 9
+    },
+    {
+      "cardIndex": 1,
+      "company": "Healthy Home Uz",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый ассистент",
+        "Healthy Home Uz",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый ассистент",
+      "vacancy_id": "138908517",
+      "page": 9
+    },
+    {
+      "cardIndex": 2,
+      "company": "Капиталбанк. Головной офис",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Главный специалист Отдела методологии и развития СВК (Департамент внутреннего контроля)",
+        "Капиталбанк. Головной офис",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Главный специалист Отдела методологии и развития СВК (Департамент внутреннего контроля)",
+      "vacancy_id": "138955342",
+      "page": 9
+    },
+    {
+      "cardIndex": 3,
+      "company": "Bolter",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Ведущий специалист отдела закупок",
+        "Bolter",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Ведущий специалист отдела закупок",
+      "vacancy_id": "139112244",
+      "page": 9
+    },
+    {
+      "cardIndex": 4,
+      "company": "Healthy Home Uz",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый ассистент",
+        "Healthy Home Uz",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый ассистент",
+      "vacancy_id": "138908517",
+      "page": 9
+    },
+    {
+      "cardIndex": 5,
+      "company": "Healthy Home Uz",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый ассистент",
+        "Healthy Home Uz",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый ассистент",
+      "vacancy_id": "138908517",
+      "page": 9
+    },
+    {
+      "cardIndex": 6,
+      "company": "Healthy Home Uz",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый ассистент",
+        "Healthy Home Uz",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый ассистент",
+      "vacancy_id": "138908517",
+      "page": 9
+    },
+    {
+      "cardIndex": 7,
+      "company": "СП ООО EAST-WEST INVEST",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый аналитик",
+        "СП ООО EAST-WEST INVEST",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Финансовый аналитик",
+      "vacancy_id": "139207409",
+      "page": 9
+    },
+    {
+      "cardIndex": 8,
+      "company": "ОOO Lactalis Central Asia",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Специалист по закупкам",
+        "ОOO Lactalis Central Asia",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Специалист по закупкам",
+      "vacancy_id": "139115408",
+      "page": 9
+    },
+    {
+      "cardIndex": 9,
+      "company": "Healthy Home Uz",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый ассистент",
+        "Healthy Home Uz",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый ассистент",
+      "vacancy_id": "138908517",
+      "page": 9
+    },
+    {
+      "cardIndex": 10,
+      "company": "Healthy Home Uz",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый ассистент",
+        "Healthy Home Uz",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый ассистент",
+      "vacancy_id": "138908517",
+      "page": 9
+    },
+    {
+      "cardIndex": 11,
+      "company": "Healthy Home Uz",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый ассистент",
+        "Healthy Home Uz",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый ассистент",
+      "vacancy_id": "138908517",
+      "page": 9
+    },
+    {
+      "cardIndex": 12,
+      "company": "Gatter-Group",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Бизнес-ассистент / Координатор проектов",
+        "Gatter-Group",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Бизнес-ассистент / Координатор проектов",
+      "vacancy_id": "139164796",
+      "page": 9
+    },
+    {
+      "cardIndex": 13,
+      "company": "Healthy Home Uz",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый ассистент",
+        "Healthy Home Uz",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый ассистент",
+      "vacancy_id": "138908517",
+      "page": 9
+    },
+    {
+      "cardIndex": 14,
+      "company": "ИП ООО NRG-BI",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Экономист / Экономист (стажер)",
+        "ИП ООО NRG-BI",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Экономист / Экономист (стажер)",
+      "vacancy_id": "138243948",
+      "page": 9
+    },
+    {
+      "cardIndex": 15,
+      "company": "Национальный межбанковский процессинговый центр",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Главный специалист отдела эмиссии",
+        "Национальный межбанковский процессинговый центр",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Главный специалист отдела эмиссии",
+      "vacancy_id": "139242303",
+      "page": 9
+    },
+    {
+      "cardIndex": 16,
+      "company": "Капиталбанк. Головной офис",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Специалист управления аналитики (Департамент по управлению рисками)",
+        "Капиталбанк. Головной офис",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Специалист управления аналитики (Департамент по управлению рисками)",
+      "vacancy_id": "138771664",
+      "page": 9
+    },
+    {
+      "cardIndex": 17,
+      "company": "ООО МФО IMPACT FINANCE LEADERS",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Старший кредитный специалист",
+        "ООО МФО IMPACT FINANCE LEADERS",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Старший кредитный специалист",
+      "vacancy_id": "139173807",
+      "page": 9
+    },
+    {
+      "cardIndex": 18,
+      "company": "Healthy Home Uz",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый ассистент",
+        "Healthy Home Uz",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый ассистент",
+      "vacancy_id": "138908517",
+      "page": 9
+    },
+    {
+      "cardIndex": 19,
+      "company": "Healthy Home Uz",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Финансовый ассистент",
+        "Healthy Home Uz",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Финансовый ассистент",
+      "vacancy_id": "138908517",
+      "page": 9
+    },
+    {
+      "cardIndex": 0,
+      "company": "Candy gold",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Бизнес ассистент",
+        "Candy gold",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Бизнес ассистент",
+      "vacancy_id": "139215844",
+      "page": 10
+    },
+    {
+      "cardIndex": 1,
+      "company": "Candy gold",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Бизнес ассистент",
+        "Candy gold",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Бизнес ассистент",
+      "vacancy_id": "139215844",
+      "page": 10
+    },
+    {
+      "cardIndex": 2,
+      "company": "Национальный межбанковский процессинговый центр",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Специалист финансового подразделения",
+        "Национальный межбанковский процессинговый центр",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Специалист финансового подразделения",
+      "vacancy_id": "139109073",
+      "page": 10
+    },
+    {
+      "cardIndex": 3,
+      "company": "Texnomart",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Специалист по некоммерческим закупкам",
+        "Texnomart",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Специалист по некоммерческим закупкам",
+      "vacancy_id": "138928495",
+      "page": 10
+    },
+    {
+      "cardIndex": 4,
+      "company": "Candy gold",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Бизнес ассистент",
+        "Candy gold",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Бизнес ассистент",
+      "vacancy_id": "139215844",
+      "page": 10
+    },
+    {
+      "cardIndex": 5,
+      "company": "Orient Finans Bank",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Специалист по контролю качества сервиса",
+        "Orient Finans Bank",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Специалист по контролю качества сервиса",
+      "vacancy_id": "138638994",
+      "page": 10
+    },
+    {
+      "cardIndex": 6,
+      "company": "Candy gold",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Бизнес ассистент",
+        "Candy gold",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Бизнес ассистент",
+      "vacancy_id": "139215844",
+      "page": 10
+    },
+    {
+      "cardIndex": 7,
+      "company": "AVO.UZ",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Специалист отдела дистрибуции",
+        "AVO.UZ",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Специалист отдела дистрибуции",
+      "vacancy_id": "139136803",
+      "page": 10
+    },
+    {
+      "cardIndex": 8,
+      "company": "Candy gold",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Бизнес ассистент",
+        "Candy gold",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Бизнес ассистент",
+      "vacancy_id": "139215844",
+      "page": 10
+    },
+    {
+      "cardIndex": 9,
+      "company": "Orient Finans Bank",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Специалист",
+        "Orient Finans Bank",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Специалист",
+      "vacancy_id": "138867007",
+      "page": 10
+    },
+    {
+      "cardIndex": 10,
+      "company": "AVO.UZ",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Специалист отдела \"фрод-мониторинг\"",
+        "AVO.UZ",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Специалист отдела \"фрод-мониторинг\"",
+      "vacancy_id": "138926649",
+      "page": 10
+    },
+    {
+      "cardIndex": 11,
+      "company": "Korzinka (Anglesey food)",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Менеджер по продукту (Superportal)",
+        "Korzinka (Anglesey food)",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер по продукту (Superportal)",
+      "vacancy_id": "138128603",
+      "page": 10
+    },
+    {
+      "cardIndex": 12,
+      "company": "OPEN BANK AJ",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Менеджер Центра Онлайн Обслуживания",
+        "OPEN BANK AJ",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Менеджер Центра Онлайн Обслуживания",
+      "vacancy_id": "132792404",
+      "page": 10
+    },
+    {
+      "cardIndex": 13,
+      "company": "UZUM TECHNOLOGIES. Работа с клиентами",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Специалист мониторинга антифрода",
+        "UZUM TECHNOLOGIES. Работа с клиентами",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Специалист мониторинга антифрода",
+      "vacancy_id": "138974986",
+      "page": 10
+    },
+    {
+      "cardIndex": 14,
+      "company": "Octobank.Контролирующее подразделение",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Казначей",
+        "Octobank.Контролирующее подразделение",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Казначей",
+      "vacancy_id": "139129937",
+      "page": 10
+    },
+    {
+      "cardIndex": 15,
+      "company": "Octobank.Розничный блок",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Ведущий специалист управления карточных продуктов",
+        "Octobank.Розничный блок",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Ведущий специалист управления карточных продуктов",
+      "vacancy_id": "139129902",
+      "page": 10
+    },
+    {
+      "cardIndex": 16,
+      "company": "Garant bank",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Маркетинговый аналитик",
+        "Garant bank",
+        "9 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Маркетинговый аналитик",
+      "vacancy_id": "139174135",
+      "page": 10
+    },
+    {
+      "cardIndex": 17,
+      "company": "Candy gold",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Бизнес ассистент",
+        "Candy gold",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Бизнес ассистент",
+      "vacancy_id": "139215844",
+      "page": 10
+    },
+    {
+      "cardIndex": 18,
+      "company": "Candy gold",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Бизнес ассистент",
+        "Candy gold",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Бизнес ассистент",
+      "vacancy_id": "139215844",
+      "page": 10
+    },
+    {
+      "cardIndex": 19,
+      "company": "Candy gold",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Бизнес ассистент",
+        "Candy gold",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Бизнес ассистент",
+      "vacancy_id": "139215844",
+      "page": 10
+    },
+    {
+      "cardIndex": 0,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 1,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 2,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 3,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 4,
+      "company": "Orient Finans Bank",
+      "date": "7 ноября",
+      "raw_lines": [
+        "Отказ",
+        "Специалист отдела экспертизы кредитных проектов",
+        "Orient Finans Bank",
+        "7 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Специалист отдела экспертизы кредитных проектов",
+      "vacancy_id": "138699152",
+      "page": 11
+    },
+    {
+      "cardIndex": 5,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 6,
+      "company": "Universal Mobile Systems ( ТМ Mobiuz )",
+      "date": "7 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Специалист группы по привлечению ключевых клиентов",
+        "Universal Mobile Systems ( ТМ Mobiuz )",
+        "7 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Специалист группы по привлечению ключевых клиентов",
+      "vacancy_id": "139135274",
+      "page": 11
+    },
+    {
+      "cardIndex": 7,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 8,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 9,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 10,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 11,
+      "company": "NAVBAHOR HOLDING (Memory Pharm AG)",
+      "date": "7 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Декларант",
+        "NAVBAHOR HOLDING (Memory Pharm AG)",
+        "7 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Декларант",
+      "vacancy_id": "138918610",
+      "page": 11
+    },
+    {
+      "cardIndex": 12,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 13,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 14,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 15,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 16,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 17,
+      "company": "Assorti Discount Markets",
+      "date": "9 ноября",
+      "raw_lines": [
+        "Просмотрен",
+        "Аналитик",
+        "Assorti Discount Markets",
+        "9 ноября",
+        "Был онлайн вчера"
+      ],
+      "title": "Аналитик",
+      "vacancy_id": "138928759",
+      "page": 11
+    },
+    {
+      "cardIndex": 18,
+      "company": "OPEN BANK AJ",
+      "date": "7 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Главный специалист по операционному сопровождению эквайринга",
+        "OPEN BANK AJ",
+        "7 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Главный специалист по операционному сопровождению эквайринга",
+      "vacancy_id": "136294517",
+      "page": 11
+    },
+    {
+      "cardIndex": 19,
+      "company": "OPEN BANK AJ",
+      "date": "7 ноября",
+      "raw_lines": [
+        "Не просмотрен",
+        "Главный специалист отдела кредитования (B2B / Корпоративный бизнес)",
+        "OPEN BANK AJ",
+        "7 ноября",
+        "Был онлайн сегодня"
+      ],
+      "title": "Главный специалист отдела кредитования (B2B / Корпоративный бизнес)",
+      "vacancy_id": "138820811",
+      "page": 11
+    }
+  ]
+}

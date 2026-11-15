@@ -1,0 +1,146 @@
+[
+  {
+    "vid": "138928260",
+    "company": "INTERNATIONAL GOLDSTARS SCHOOL",
+    "has_textarea": false,
+    "is_rejected": false,
+    "already_has_letter": false,
+    "snippet": "INTERNATIONAL GOLDSTARS SCHOOL Был онлайн 13.11 Вакансия Кассир (отдел бухгалтерии школы) 13 ноября Гулзийо Собеседование  Abdulhakim Нодиржон угли, з",
+    "action": "skipped"
+  },
+  {
+    "vid": "139136332",
+    "company": "InFinBank",
+    "has_textarea": false,
+    "is_rejected": true,
+    "already_has_letter": false,
+    "snippet": "InFinBank Был онлайн 13.11 Вакансия Korporativ kreditlash bo'limi Mijoz menejeri (Zangiota filiali) 9 ноября Отклик на вакансию  Без сопроводительного",
+    "action": "skipped"
+  },
+  {
+    "vid": "139166811",
+    "company": "RWB (Wildberries & Russ)",
+    "has_textarea": false,
+    "is_rejected": true,
+    "already_has_letter": false,
+    "snippet": "RWB (Wildberries & Russ) Был онлайн 13.11 Вакансия Менеджер по работе с партнерами 9 ноября Отклик на вакансию  Без сопроводительного письма  22:19 До",
+    "action": "skipped"
+  },
+  {
+    "vid": "139175480",
+    "company": "Eurasian Machinery (Евразиан Машинери)",
+    "has_textarea": false,
+    "is_rejected": true,
+    "already_has_letter": false,
+    "snippet": "Eurasian Machinery (Евразиан Машинери) Был онлайн 13.11 Вакансия Финансовый специалист 9 ноября Отклик на вакансию  Без сопроводительного письма  22:2",
+    "action": "skipped"
+  },
+  {
+    "vid": "139063180",
+    "company": "Citi Fuel (ООО Staff Atlantic)",
+    "has_textarea": false,
+    "is_rejected": true,
+    "already_has_letter": false,
+    "snippet": "Citi Fuel (ООО Staff Atlantic) Был онлайн 12.11 Вакансия Pricing Analyst (Аналитик по ценообразованию) 9 ноября Отклик на вакансию  Без сопроводительн",
+    "action": "skipped"
+  },
+  {
+    "vid": "138736113",
+    "company": "ASSALOM-ESTATE",
+    "has_textarea": false,
+    "is_rejected": true,
+    "already_has_letter": false,
+    "snippet": "ASSALOM-ESTATE Был онлайн 13.11 Вакансия Бизнес-аналитик по управлению CRM 9 ноября Отклик на вакансию  .  22:22 10 ноября Жасмина Отказ  Abdulhakim Н",
+    "action": "skipped"
+  },
+  {
+    "vid": "139211827",
+    "company": "HamkorBank",
+    "has_textarea": false,
+    "is_rejected": true,
+    "already_has_letter": false,
+    "snippet": "HamkorBank Был онлайн в 17:41 Вакансия Менеджер по работе с международными исламскими финансовыми институтами (Привлечение) 9 ноября Отклик на ваканси",
+    "action": "skipped"
+  },
+  {
+    "vid": "139239601",
+    "company": "Ipotekabank OTP Group",
+    "has_textarea": false,
+    "is_rejected": true,
+    "already_has_letter": false,
+    "snippet": "Ipotekabank OTP Group Был онлайн 13.11 Вакансия Специалист административно-хозяйственного отдела 9 ноября Отклик на вакансию  Без сопроводительного пи",
+    "action": "skipped"
+  },
+  {
+    "vid": "138904005",
+    "company": "ИП ООО Xalq Retail",
+    "has_textarea": false,
+    "is_rejected": true,
+    "already_has_letter": false,
+    "snippet": "ИП ООО Xalq Retail Был онлайн недавно Вакансия Помощник категорийного менеджера 9 ноября Отклик на вакансию  Без сопроводительного письма  22:18 Добав",
+    "action": "skipped"
+  },
+  {
+    "vid": "138348834",
+    "company": "SILKWAY SOLUTIONS",
+    "has_textarea": false,
+    "is_rejected": true,
+    "already_has_letter": false,
+    "snippet": "SILKWAY SOLUTIONS Был онлайн 13.11 Вакансия Ассистент отдела логистики 9 ноября Отклик на вакансию  Без сопроводительного письма  22:16 Добавить сопро",
+    "action": "skipped"
+  },
+  {
+    "vid": "139280323",
+    "company": "InFinBank",
+    "has_textarea": false,
+    "is_rejected": true,
+    "already_has_letter": false,
+    "snippet": "InFinBank Был онлайн 13.11 Вакансия Kassir (Amaliyot boshqarmasi) 9 ноября Отклик на вакансию  Без сопроводительного письма  22:18 Добавить сопроводит",
+    "action": "skipped"
+  },
+  {
+    "vid": "139134530",
+    "company": "UzCarlsberg",
+    "has_textarea": false,
+    "is_rejected": true,
+    "already_has_letter": false,
+    "snippet": "UzCarlsberg Был онлайн в 19:01 Вакансия Финансовый аналитик 9 ноября Отклик на вакансию  Без сопроводительного письма  22:19 Добавить сопроводительное",
+    "action": "skipped"
+  },
+  {
+    "vid": "139148269",
+    "company": "ONEFOOD",
+    "has_textarea": false,
+    "is_rejected": false,
+    "already_has_letter": false,
+    "snippet": "ONEFOOD Был онлайн 13.11 Вакансия Помощник операционного директора 9 ноября Отклик на вакансию  Без сопроводительного письма  22:28 Добавить сопроводи",
+    "action": "skipped"
+  },
+  {
+    "vid": "139115408",
+    "company": "ОOO Lactalis Central Asia",
+    "has_textarea": false,
+    "is_rejected": false,
+    "already_has_letter": false,
+    "snippet": "ОOO Lactalis Central Asia Был онлайн недавно Вакансия Специалист по закупкам 9 ноября Отклик на вакансию  Без сопроводительного письма  22:23 Добавить",
+    "action": "skipped"
+  },
+  {
+    "vid": "139114696",
+    "company": "Национальный комитет Республики Узбекистан по статистике",
+    "has_textarea": false,
+    "is_rejected": false,
+    "already_has_letter": false,
+    "snippet": "Национальный комитет Республики Узбекистан по статистике Был онлайн 12.11 Вакансия Iqtisodchi-tahlilchi (yetakchi/bosh mutaxassis) 9 ноября Отклик на ",
+    "action": "skipped"
+  },
+  {
+    "vid": "138928759",
+    "company": "Assorti Discount Markets",
+    "has_textarea": false,
+    "is_rejected": false,
+    "already_has_letter": false,
+    "snippet": "Assorti Discount Markets Был онлайн вчера Вакансия Аналитик 7 ноября Отклик на вакансию  Без сопроводительного письма  18:25 Добавить сопроводительное",
+    "action": "skipped"
+  }
+]

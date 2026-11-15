@@ -1,0 +1,842 @@
+[
+  {
+    "cardIndex": 0,
+    "company": "YAMAHA TASHKENT (ООО “SHOWPRO”)",
+    "date": "сегодня",
+    "title": "Project manager (операционный руководитель маркетинговых проектов)",
+    "page": 0
+  },
+  {
+    "cardIndex": 1,
+    "company": "GORILLA ASIA (ГОРИЛЛА АЗИЯ)",
+    "date": "сегодня",
+    "title": "Заместитель главного бухгалтера/Бухгалтер по налогам",
+    "page": 0
+  },
+  {
+    "cardIndex": 2,
+    "company": "ГУ MILLIY BIOFARMATSEVTIKA ILMIY-TADQIQOT INSTITUTI",
+    "date": "сегодня",
+    "title": "Главный бухгалтер",
+    "page": 0
+  },
+  {
+    "cardIndex": 3,
+    "company": "ООО Ansher Capital",
+    "date": "сегодня",
+    "title": "Генеральный Директор",
+    "page": 0
+  },
+  {
+    "cardIndex": 4,
+    "company": "Free Style Group",
+    "date": "сегодня",
+    "title": "Chain Manager | Levi's, Cole Haan, Puma",
+    "page": 0
+  },
+  {
+    "cardIndex": 5,
+    "company": "SYNAPSTER",
+    "date": "сегодня",
+    "title": "Менеджер по привлечению мерчантов",
+    "page": 0
+  },
+  {
+    "cardIndex": 6,
+    "company": "СП ООО PPG-PRIME POLYMER GROUP",
+    "date": "сегодня",
+    "title": "Руководитель проекта (импорт-экспорт и оптовые продажи подгузников)",
+    "page": 0
+  },
+  {
+    "cardIndex": 7,
+    "company": "ZOOMLION HEAVY INDUSTRY SCIENCE AND TECHNOLOGY",
+    "date": "сегодня",
+    "title": "Специалист по взысканию задолженности",
+    "page": 0
+  },
+  {
+    "cardIndex": 8,
+    "company": "UNITED VENTURES",
+    "date": "сегодня",
+    "title": "Venture Associate",
+    "page": 0
+  },
+  {
+    "cardIndex": 9,
+    "company": "TEZ MASLAHAT MAKONI",
+    "date": "сегодня",
+    "title": "Специалист по кредитованию. Менеджер по продажам.",
+    "page": 0
+  },
+  {
+    "cardIndex": 10,
+    "company": "ELCORE DISTRIBUTION CA",
+    "date": "сегодня",
+    "title": "Commercial director",
+    "page": 0
+  },
+  {
+    "cardIndex": 11,
+    "company": "ZENITH LEVCOM",
+    "date": "сегодня",
+    "title": "Media Head",
+    "page": 0
+  },
+  {
+    "cardIndex": 12,
+    "company": "Alfa Monet Group",
+    "date": "сегодня",
+    "title": "Менеджер по маркетплейсам",
+    "page": 0
+  },
+  {
+    "cardIndex": 13,
+    "company": "Perfect balance",
+    "date": "сегодня",
+    "title": "Главный бухгалтер в аутсорс",
+    "page": 0
+  },
+  {
+    "cardIndex": 14,
+    "company": "LIME MIKROMOLIYA TASHKILOTI",
+    "date": "сегодня",
+    "title": "Кредитный специалист (мониторинг и выдача)",
+    "page": 0
+  },
+  {
+    "cardIndex": 15,
+    "company": "Porsche Uzbekistan",
+    "date": "сегодня",
+    "title": "Технический директор",
+    "page": 0
+  },
+  {
+    "cardIndex": 16,
+    "company": "MIRABAT COMFORT",
+    "date": "сегодня",
+    "title": "Бухгалтер",
+    "page": 0
+  },
+  {
+    "cardIndex": 17,
+    "company": "VIVAMED CENTER",
+    "date": "сегодня",
+    "title": "Специалист по бизнес-процессам, отчётности и автоматизации — Viva med center (Клиника)",
+    "page": 0
+  },
+  {
+    "cardIndex": 18,
+    "company": "ЧП RIO INTERNATIONAL",
+    "date": "сегодня",
+    "title": "Помощник финансиста",
+    "page": 0
+  },
+  {
+    "cardIndex": 19,
+    "company": "SOF GROUP MANAGEMENT LLC",
+    "date": "сегодня",
+    "title": "Financial specialist",
+    "page": 0
+  },
+  {
+    "cardIndex": 0,
+    "company": "UNICOM DISTRIBUTION",
+    "date": "сегодня",
+    "title": "Finansist",
+    "page": 1
+  },
+  {
+    "cardIndex": 1,
+    "company": "Milkolino Products",
+    "date": "сегодня",
+    "title": "Продуктовый маркетолог-аналитик",
+    "page": 1
+  },
+  {
+    "cardIndex": 2,
+    "company": "INSOF",
+    "date": "сегодня",
+    "title": "Финансовый менеджер",
+    "page": 1
+  },
+  {
+    "cardIndex": 3,
+    "company": "ICE FRUTS",
+    "date": "сегодня",
+    "title": "Chief financial officer (CFO)",
+    "page": 1
+  },
+  {
+    "cardIndex": 4,
+    "company": "SOF GROUP",
+    "date": "сегодня",
+    "title": "Finance Manager",
+    "page": 1
+  },
+  {
+    "cardIndex": 5,
+    "company": "ATI.SU",
+    "date": "сегодня",
+    "title": "Представитель IT компании в Узбекистане",
+    "page": 1
+  },
+  {
+    "cardIndex": 6,
+    "company": "Erk Makon",
+    "date": "сегодня",
+    "title": "Региональный менеджер по продажам колбасных изделий и мясных деликатесов",
+    "page": 1
+  },
+  {
+    "cardIndex": 7,
+    "company": "PRO-STAFF",
+    "date": "сегодня",
+    "title": "Региональный менеджер в фармацевтическую компанию (Ташкент и Ташкентская область)",
+    "page": 1
+  },
+  {
+    "cardIndex": 8,
+    "company": "ASBIS CA",
+    "date": "сегодня",
+    "title": "Key Account Manager B2B (Apple)",
+    "page": 1
+  },
+  {
+    "cardIndex": 9,
+    "company": "U-MAX PROPERTIES",
+    "date": "сегодня",
+    "title": "Бренд-менеджер",
+    "page": 1
+  },
+  {
+    "cardIndex": 10,
+    "company": "АКБ Тенге Банк",
+    "date": "сегодня",
+    "title": "Начальник управления по развитию транзакционных продуктов",
+    "page": 1
+  },
+  {
+    "cardIndex": 11,
+    "company": "FIRST DRY PORT TERMINAL",
+    "date": "сегодня",
+    "title": "Бухгалтер по расчету заработной платы",
+    "page": 1
+  },
+  {
+    "cardIndex": 12,
+    "company": "AVO.UZ",
+    "date": "сегодня",
+    "title": "Руководитель отдела моделирования кредитных рисков",
+    "page": 1
+  },
+  {
+    "cardIndex": 13,
+    "company": "TBC OPERATIONS",
+    "date": "сегодня",
+    "title": "Кредитный специалист (Ташкент)",
+    "page": 1
+  },
+  {
+    "cardIndex": 14,
+    "company": "SAPHIR DISTRIBUTION CO",
+    "date": "сегодня",
+    "title": "Операционный директор (COO)",
+    "page": 1
+  },
+  {
+    "cardIndex": 15,
+    "company": "Ipotekabank OTP Group",
+    "date": "сегодня",
+    "title": "Менеджер по работе с клиентами (Relationship Manager) (МСБ)",
+    "page": 1
+  },
+  {
+    "cardIndex": 16,
+    "company": "Международная компания",
+    "date": "сегодня",
+    "title": "Senior Product Manager (маркетплейс)",
+    "page": 1
+  },
+  {
+    "cardIndex": 17,
+    "company": "ASTERIUM",
+    "date": "сегодня",
+    "title": "Руководитель отдела клиринговых операций (финтех / крипто)",
+    "page": 1
+  },
+  {
+    "cardIndex": 18,
+    "company": "АКБ Агробанк",
+    "date": "сегодня",
+    "title": "Senior Product Manager",
+    "page": 1
+  },
+  {
+    "cardIndex": 19,
+    "company": "Ipotekabank OTP Group",
+    "date": "сегодня",
+    "title": "Менеджер по работе с зарплатными проектами",
+    "page": 1
+  },
+  {
+    "cardIndex": 0,
+    "company": "EY Uzbekistan",
+    "date": "сегодня",
+    "title": "Staff in Financial Accounting Advisory Services",
+    "page": 2
+  },
+  {
+    "cardIndex": 1,
+    "company": "Startups DNA (OOO SARAFAN)",
+    "date": "сегодня",
+    "title": "Главный бухгалтер (\"SISTRONIK SYSTEM\")",
+    "page": 2
+  },
+  {
+    "cardIndex": 2,
+    "company": "ASTERIUM",
+    "date": "сегодня",
+    "title": "Head of Finance Analytics Department",
+    "page": 2
+  },
+  {
+    "cardIndex": 3,
+    "company": "СOMPASS MANAGEMENT",
+    "date": "сегодня",
+    "title": "Директор транспортной компании",
+    "page": 2
+  },
+  {
+    "cardIndex": 4,
+    "company": "KHAN BARAKA DECOR",
+    "date": "сегодня",
+    "title": "Генеральный директор \\ CEO",
+    "page": 2
+  },
+  {
+    "cardIndex": 5,
+    "company": "Juru",
+    "date": "сегодня",
+    "title": "Senior Policy and Economic Analyst",
+    "page": 2
+  },
+  {
+    "cardIndex": 6,
+    "company": "ROODELL",
+    "date": "сегодня",
+    "title": "Ведущий аудитор",
+    "page": 2
+  },
+  {
+    "cardIndex": 7,
+    "company": "EVOS",
+    "date": "сегодня",
+    "title": "Делопроизводитель",
+    "page": 2
+  },
+  {
+    "cardIndex": 8,
+    "company": "EVOS",
+    "date": "сегодня",
+    "title": "Офис-менеджер",
+    "page": 2
+  },
+  {
+    "cardIndex": 9,
+    "company": "EVOS",
+    "date": "сегодня",
+    "title": "АДМИНИСТРАТИВНЫЙ ПОМОЩНИК / ПОМОЩНИК РУКОВОДИТЕЛЯ",
+    "page": 2
+  },
+  {
+    "cardIndex": 10,
+    "company": "EVOS",
+    "date": "сегодня",
+    "title": "Менеджер по лицензионным промо",
+    "page": 2
+  },
+  {
+    "cardIndex": 11,
+    "company": "KEYSOFT",
+    "date": "сегодня",
+    "title": "Главный бухгалтер",
+    "page": 2
+  },
+  {
+    "cardIndex": 12,
+    "company": "Sarkor Telekom",
+    "date": "сегодня",
+    "title": "Руководитель отдела продуктов B2B",
+    "page": 2
+  },
+  {
+    "cardIndex": 13,
+    "company": "BAICHENG TASHKENT",
+    "date": "сегодня",
+    "title": "Главный бухгалтер",
+    "page": 2
+  },
+  {
+    "cardIndex": 14,
+    "company": "ISHONCH",
+    "date": "сегодня",
+    "title": "Head of HR (офис)",
+    "page": 2
+  },
+  {
+    "cardIndex": 15,
+    "company": "СП ООО Havas food",
+    "date": "сегодня",
+    "title": "Коммерческий директор (FMCG, фасовка и дистрибуция)",
+    "page": 2
+  },
+  {
+    "cardIndex": 16,
+    "company": "АКБ Агробанк",
+    "date": "сегодня",
+    "title": "NLP Team Lead (AI / LLM)",
+    "page": 2
+  },
+  {
+    "cardIndex": 17,
+    "company": "MITTIVOYGROUP",
+    "date": "сегодня",
+    "title": "Руководитель направления категорийного менеджмента (FMCG)",
+    "page": 2
+  },
+  {
+    "cardIndex": 18,
+    "company": "NETWORK MEDIA",
+    "date": "сегодня",
+    "title": "Account manager (медийное агентство, client service / media / рекламное)",
+    "page": 2
+  },
+  {
+    "cardIndex": 19,
+    "company": "АИКБ ИПАК ЙУЛИ БАНК",
+    "date": "сегодня",
+    "title": "Специалист по кредитованию МСБ (Шайхантахурский филиал)",
+    "page": 2
+  },
+  {
+    "cardIndex": 0,
+    "company": "AZIMUTH (ООО TECHNOLOGIES OF REAL TIME)",
+    "date": "сегодня",
+    "title": "Коммерческий директор/CCO/Chief Commercial Officer (производство, B2B, экспорт)",
+    "page": 3
+  },
+  {
+    "cardIndex": 1,
+    "company": "NETWORK MEDIA",
+    "date": "сегодня",
+    "title": "TV Buyer",
+    "page": 3
+  },
+  {
+    "cardIndex": 2,
+    "company": "ASTERIUM",
+    "date": "сегодня",
+    "title": "Head of Daily Banking",
+    "page": 3
+  },
+  {
+    "cardIndex": 3,
+    "company": "ООО ASTANA MOTORS COMPANY",
+    "date": "сегодня",
+    "title": "Руководитель отдела продаж",
+    "page": 3
+  },
+  {
+    "cardIndex": 4,
+    "company": "Smart Solutions Personnel",
+    "date": "сегодня",
+    "title": "Представитель в торговых точках",
+    "page": 3
+  },
+  {
+    "cardIndex": 5,
+    "company": "ПУ PricewaterhouseCoopers Central Asia and Caucasus B.V.",
+    "date": "сегодня",
+    "title": "Бухгалтер",
+    "page": 3
+  },
+  {
+    "cardIndex": 6,
+    "company": "ООО Нестле Фуд",
+    "date": "сегодня",
+    "title": "Финансовый Контролер по продажам/ Financial Sales Controller",
+    "page": 3
+  },
+  {
+    "cardIndex": 7,
+    "company": "ООО Нестле Фуд",
+    "date": "сегодня",
+    "title": "Главный Бухгалтер (Chief Accountant)",
+    "page": 3
+  },
+  {
+    "cardIndex": 8,
+    "company": "SMART HR",
+    "date": "сегодня",
+    "title": "Директор по развитию сети ресторанов (Restaurant Development Director)",
+    "page": 3
+  },
+  {
+    "cardIndex": 9,
+    "company": "EY Uzbekistan",
+    "date": "сегодня",
+    "title": "Intern in Project Finance & infrastructure, Strategy&Transaction (PFI)",
+    "page": 3
+  },
+  {
+    "cardIndex": 10,
+    "company": "Формула 55",
+    "date": "сегодня",
+    "title": "Руководитель коммерческого департамента",
+    "page": 3
+  },
+  {
+    "cardIndex": 11,
+    "company": "EPG-POS",
+    "date": "сегодня",
+    "title": "Руководитель отдела продаж /Директор по продажам/Head of sales/РОП",
+    "page": 3
+  },
+  {
+    "cardIndex": 12,
+    "company": "Variant Retail Finance",
+    "date": "сегодня",
+    "title": "Начальник отдела по работе с просроченной задолженностью (Hard Collection)",
+    "page": 3
+  },
+  {
+    "cardIndex": 13,
+    "company": "ZIYNAT MOLIYA",
+    "date": "сегодня",
+    "title": "Менеджер по продажам",
+    "page": 3
+  },
+  {
+    "cardIndex": 14,
+    "company": "Брайт Эйдженси",
+    "date": "сегодня",
+    "title": "Инженер по машинному обучению (ML-инженер)",
+    "page": 3
+  },
+  {
+    "cardIndex": 15,
+    "company": "KEYSOFT",
+    "date": "сегодня",
+    "title": "ТЭО/ТЭР писатель (в Ташкент)",
+    "page": 3
+  },
+  {
+    "cardIndex": 16,
+    "company": "БСФ (ТМ РАДУГА)",
+    "date": "сегодня",
+    "title": "Региональный представитель",
+    "page": 3
+  },
+  {
+    "cardIndex": 17,
+    "company": "Fersol",
+    "date": "сегодня",
+    "title": "Senior Leasing Consultant",
+    "page": 3
+  },
+  {
+    "cardIndex": 18,
+    "company": "ООО «KPMG AUDIT»",
+    "date": "сегодня",
+    "title": "Executive, Fixed Assets/Deal Advisory",
+    "page": 3
+  },
+  {
+    "cardIndex": 19,
+    "company": "ООО «KPMG AUDIT»",
+    "date": "сегодня",
+    "title": "Executive, Transaction Services/Deal Advisory",
+    "page": 3
+  },
+  {
+    "cardIndex": 0,
+    "company": "UZUM TECHNOLOGIES. IT",
+    "date": "сегодня",
+    "title": "PL/SQL Developer",
+    "page": 4
+  },
+  {
+    "cardIndex": 1,
+    "company": "Bolter",
+    "date": "сегодня",
+    "title": "Руководитель отдела продаж",
+    "page": 4
+  },
+  {
+    "cardIndex": 2,
+    "company": "UNITEL LLC",
+    "date": "сегодня",
+    "title": "Head of Customer Value Management & Customer Experience",
+    "page": 4
+  },
+  {
+    "cardIndex": 3,
+    "company": "DREAMLIFE",
+    "date": "сегодня",
+    "title": "Sotuv xodimlari",
+    "page": 4
+  },
+  {
+    "cardIndex": 4,
+    "company": "ANNEXURE",
+    "date": "сегодня",
+    "title": "Заместитель директора",
+    "page": 4
+  },
+  {
+    "cardIndex": 5,
+    "company": "EY Uzbekistan",
+    "date": "сегодня",
+    "title": "Senior Consultant in Strategy & Execution (Corporate Strategy)",
+    "page": 4
+  },
+  {
+    "cardIndex": 6,
+    "company": "NILSTROY HOLDING",
+    "date": "сегодня",
+    "title": "Руководитель отдела продаж",
+    "page": 4
+  },
+  {
+    "cardIndex": 7,
+    "company": "Murad Buildings",
+    "date": "сегодня",
+    "title": "Руководитель управления инженерно-экономического сопровождения (Head of Cost Management)",
+    "page": 4
+  },
+  {
+    "cardIndex": 8,
+    "company": "Antal International Tashkent Xususiy Bandlik Agentligi",
+    "date": "сегодня",
+    "title": "Head of Product",
+    "page": 4
+  },
+  {
+    "cardIndex": 9,
+    "company": "BOSTON OIL TRADE (Uztobacco)",
+    "date": "сегодня",
+    "title": "Руководитель HR-отдела",
+    "page": 4
+  },
+  {
+    "cardIndex": 10,
+    "company": "EXZAP",
+    "date": "сегодня",
+    "title": "Руководитель группы фактурирования",
+    "page": 4
+  },
+  {
+    "cardIndex": 11,
+    "company": "ANCOR Uzbekistan",
+    "date": "сегодня",
+    "title": "Менеджер по развитию партнерской сети / Key Account Manager",
+    "page": 4
+  },
+  {
+    "cardIndex": 12,
+    "company": "OOO FILIGRAN INC",
+    "date": "сегодня",
+    "title": "Региональный менеджер по продажам (FMCG)",
+    "page": 4
+  },
+  {
+    "cardIndex": 13,
+    "company": "Asman JV LLC",
+    "date": "сегодня",
+    "title": "Менеджер Автосалона (РОП)",
+    "page": 4
+  },
+  {
+    "cardIndex": 14,
+    "company": "MARYAM DENTIST",
+    "date": "сегодня",
+    "title": "Управляющий стоматологической клиникой Dynasty",
+    "page": 4
+  },
+  {
+    "cardIndex": 15,
+    "company": "UZTRANSFORMATOR",
+    "date": "сегодня",
+    "title": "Начальник отдела продаж",
+    "page": 4
+  },
+  {
+    "cardIndex": 16,
+    "company": "Contab",
+    "date": "сегодня",
+    "title": "Преподаватель международной программы ACCA в ТОЧКУ РОСТА",
+    "page": 4
+  },
+  {
+    "cardIndex": 17,
+    "company": "CORE TECHNOLOGY",
+    "date": "сегодня",
+    "title": "Junior Data Engineer/Младший инженер данных",
+    "page": 4
+  },
+  {
+    "cardIndex": 18,
+    "company": "PONAEHALITASH",
+    "date": "сегодня",
+    "title": "Руководитель отдела продаж",
+    "page": 4
+  },
+  {
+    "cardIndex": 19,
+    "company": "YATT KARSHIYEV NURIDDIN NAMAZOVICH",
+    "date": "сегодня",
+    "title": "Руководитель отдела продаж",
+    "page": 4
+  },
+  {
+    "cardIndex": 0,
+    "company": "AN SERGEY VIKTOROVICH",
+    "date": "сегодня",
+    "title": "Директор отделов продаж",
+    "page": 5
+  },
+  {
+    "cardIndex": 1,
+    "company": "FlexSoft",
+    "date": "сегодня",
+    "title": "Директор по продажам (B2B, финтех)",
+    "page": 5
+  },
+  {
+    "cardIndex": 2,
+    "company": "ИП ООО Xalq Retail",
+    "date": "сегодня",
+    "title": "Руководитель направления C&B",
+    "page": 5
+  },
+  {
+    "cardIndex": 3,
+    "company": "MUDARRIS AKADEMIYA",
+    "date": "сегодня",
+    "title": "Операционный менеджер",
+    "page": 5
+  },
+  {
+    "cardIndex": 4,
+    "company": "Octobank.Контролирующее подразделение",
+    "date": "сегодня",
+    "title": "Риск-менеджер по управлению рыночными и ликвидными рисками",
+    "page": 5
+  },
+  {
+    "cardIndex": 5,
+    "company": "INCOTRUCK",
+    "date": "сегодня",
+    "title": "Финансовый директор (CFO)",
+    "page": 5
+  },
+  {
+    "cardIndex": 6,
+    "company": "ELMAS HALI",
+    "date": "сегодня",
+    "title": "Маркетолог- аналитик",
+    "page": 5
+  },
+  {
+    "cardIndex": 7,
+    "company": "PROFESSIONAL WATER MANAGEMENT",
+    "date": "сегодня",
+    "title": "Finansist",
+    "page": 5
+  },
+  {
+    "cardIndex": 8,
+    "company": "COSCOM ТМ Ucell",
+    "date": "сегодня",
+    "title": "Руководитель по коммерческой аналитике",
+    "page": 5
+  },
+  {
+    "cardIndex": 9,
+    "company": "ELMAS HALI",
+    "date": "сегодня",
+    "title": "Маркетолог- аналитик",
+    "page": 5
+  },
+  {
+    "cardIndex": 10,
+    "company": "SOCIAL PRIMARY CARE",
+    "date": "сегодня",
+    "title": "Специалист финансового отдела (1С)",
+    "page": 5
+  },
+  {
+    "cardIndex": 11,
+    "company": "AJ “O'zTMK”",
+    "date": "сегодня",
+    "title": "Главный специалист по бюджетированию",
+    "page": 5
+  },
+  {
+    "cardIndex": 12,
+    "company": "ООО Ansher Capital",
+    "date": "сегодня",
+    "title": "Investment Associate (Equity Research & Transaction Execution)",
+    "page": 5
+  },
+  {
+    "cardIndex": 13,
+    "company": "LEGION CO",
+    "date": "сегодня",
+    "title": "Финансовый аналитик",
+    "page": 5
+  },
+  {
+    "cardIndex": 14,
+    "company": "Delоitte&Touche",
+    "date": "вчера",
+    "title": "Manager in Audit Department",
+    "page": 5
+  },
+  {
+    "cardIndex": 15,
+    "company": "MESMER-EAST",
+    "date": "вчера",
+    "title": "Стажёр отдела развития бизнеса (Business Development Intern)",
+    "page": 5
+  },
+  {
+    "cardIndex": 16,
+    "company": "BLACKPILAF (ТМ Besh Qozon)",
+    "date": "вчера",
+    "title": "Операционный директор (COO)",
+    "page": 5
+  },
+  {
+    "cardIndex": 17,
+    "company": "Garant bank",
+    "date": "вчера",
+    "title": "Начальник управления розничного бизнеса",
+    "page": 5
+  },
+  {
+    "cardIndex": 18,
+    "company": "АКБ Агробанк",
+    "date": "вчера",
+    "title": "PMO Methodologist / Benefits Realization Lead (Методолог)",
+    "page": 5
+  },
+  {
+    "cardIndex": 19,
+    "company": "ИП ООО SANY AUTOMOBILE MANUFACTURING CENTRAL ASIA",
+    "date": "вчера",
+    "title": "Бухгалтер",
+    "page": 5
+  }
+]

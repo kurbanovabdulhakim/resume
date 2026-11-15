@@ -82,6 +82,8 @@ class TestAIFirstPipeline(unittest.TestCase):
             py, str(Config.SCRIPTS_DIR / "dashboard.py"),
             "--db-path", str(test_db),
             "--html-path", str(dash_html),
+            "--pipeline-md-path", str(dash_pipe),
+            "--ai-context-path", str(dash_ctx),
             "--json",
         ]
         out_dash = subprocess.check_output(dash_cmd, text=True)

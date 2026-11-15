@@ -110,3 +110,41 @@ python scripts/dashboard.py [--json]
 - `--db-path PATH`: Custom DB path.
 - `--html-path PATH`: Custom HTML path.
 - `--json`: Output machine-readable JSON.
+
+---
+
+## 7. `hh_ai.py`
+Scores HeadHunter vacancies against `master/resume.md` and composes `humanizer`-verified Russian cover letters via local Ollama (`qwen2.5-coder:7b`) or Hermes.
+
+```bash
+python scripts/hh_ai.py --vacancy-id 139244548 --backend ollama --json
+```
+**Flags:**
+- `--vacancy-id ID` / `--title TITLE`: Target vacancy from DB or manual input.
+- `--backend ollama|hermes|none`: LLM composer backend. Default: `ollama`.
+- `--json`: Output machine-readable JSON.
+
+---
+
+## 8. `hh_queue.py`
+Selects eligible unapplied `hh.uz` vacancies, tracks daily quota (`--daily-limit 200`), and persists queue states (`data/hh_autonomy_queue.json`, `data/hh_autonomy_state.json`).
+
+```bash
+python scripts/hh_queue.py --status --json
+python scripts/hh_queue.py --prepare --limit 25 --backend ollama --json
+```
+
+---
+
+## 9. `hh_apply.py` & `launch_hh_visible.ps1`
+Visible multi-mode HeadHunter application runner supporting autonomous wave mode (`--mode browser --confirm none`), per-item manual confirmation (`--confirm each`), official `dev.hh.ru` OAuth API (`--mode api`), and clipboard-assist (`--mode assist`). Pauses with audible + console alert on CAPTCHA or login screens and lets the user switch live to `--confirm each`.
+
+```bash
+python scripts/hh_apply.py --dry-run --limit 5 --backend ollama --json
+python scripts/hh_apply.py --mode browser --confirm none --daily-limit 200 --wave-size 25 --start-url "https://tashkent.hh.uz/vacancies/finansovyy_analitik" --target-min-score 0
+scripts\Start_HH_Visible.cmd
+```
+**Key URL priority flags:**
+- `--start-url URL`: Harvests all pages of an explicit HH category/search URL and prioritizes those vacancies strictly first.
+- `--target-min-score N` (default `0` for explicit URL): Allows applying to all open unapplied vacancies from `--start-url` before falling back to general `db/positions.db` (`--min-score 55`).
+- `--harvest-max-pages N` / `--target-only`: Controls search page depth and whether to stop after `--start-url`.

@@ -75,14 +75,23 @@ def parse_hh_search_snippet(item: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
-def fetch_hh_vacancies(query: str = "бизнес-аналитик", limit: int = 20) -> List[Dict[str, Any]]:
+def fetch_hh_vacancies(
+    query: str = "бизнес-аналитик",
+    limit: int = 20,
+    access_token: Optional[str] = None,
+) -> List[Dict[str, Any]]:
     """Queries hh.uz public search API for Tashkent (area 2759)."""
-    encoded_query = urllib.parse.quote(query)
-    # Tashkent area = 2759 on HeadHunter
-    url = f"https://api.hh.ru/vacancies?text={encoded_query}&area=2759&per_page={min(limit, 100)}"
+    import os
+
+    params = urllib.parse.urlencode({"text": query, "area": 2759, "per_page": min(limit, 100)})
+    url = f"https://api.hh.ru/vacancies?{params}"
     headers = {
-        "User-Agent": "Resume-Job-Tracker/1.0 (aa998908550790@gmail.com)"
+        "HH-User-Agent": f"Resume-Job-Tracker/1.0 ({Config.CANDIDATE_EMAIL})",
+        "User-Agent": f"Resume-Job-Tracker/1.0 ({Config.CANDIDATE_EMAIL})",
     }
+    token = (access_token or os.environ.get("HH_ACCESS_TOKEN", "")).strip()
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
 
     try:
         req = urllib.request.Request(url, headers=headers)
@@ -90,6 +99,13 @@ def fetch_hh_vacancies(query: str = "бизнес-аналитик", limit: int 
             data = json.loads(response.read().decode("utf-8"))
             items = data.get("items", [])
             return [parse_hh_search_snippet(it) for it in items[:limit]]
+    except urllib.error.HTTPError as e:
+        log_event(
+            "HH_FETCH_HTTP_ERROR",
+            {"query": query, "status": e.code, "error": str(e)},
+            level="WARNING",
+        )
+        return []
     except Exception as e:
         log_event("HH_FETCH_ERROR", {"query": query, "error": str(e)}, level="WARNING")
         return []

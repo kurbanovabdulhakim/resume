@@ -39,5 +39,9 @@ generated/*
 *.bak
 *~
 
+# Ephemeral runtime autonomy queues/state
+data/hh_autonomy_*.json
+data/olx_outreach_drafts.json
+
 # Database is TRACKED in git as Single Source of Truth
 !db/positions.db
