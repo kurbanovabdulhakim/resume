@@ -17,15 +17,15 @@ related:
 
 ```yaml
 {
-  "generated_at": "2026-11-16T00:42:51.347800",
+  "generated_at": "2026-11-16T23:56:54.102766",
   "database": "db/positions.db",
-  "vacancies_total": 5443,
-  "active_vacancies": 3105,
-  "total_vacancies": 5443,
-  "applications_total": 1848,
-  "total_applications": 1848,
+  "vacancies_total": 5453,
+  "active_vacancies": 3115,
+  "total_vacancies": 5453,
+  "applications_total": 1850,
+  "total_applications": 1850,
   "statuses": {
-    "applied": 1796,
+    "applied": 1798,
     "viewed": 0,
     "invited": 6,
     "interview": 46,
@@ -34,15 +34,22 @@ related:
     "declined": 0
   },
   "tier_distribution": {
-    "1": 498,
+    "1": 509,
     "2": 2323,
-    "3": 2622
+    "3": 2621
   },
   "sector_distribution": {
     "Analytics": 259,
-    "Finance": 2759,
+    "Banking": 2,
+    "Finance": 2758,
     "Logistics": 346,
-    "Management": 2079
+    "Management": 2079,
+    "Финансовые Data и Бизнес-аналитики": 2,
+    "Финансовые аналитики и FP&A": 1,
+    "Финансовые директора (CFO)": 1,
+    "Финансовые менеджеры и Корпоративные финансы": 2,
+    "Финансовый контроль и Аудит": 1,
+    "Экономисты предприятий": 2
   },
   "urgent_leads_count": 52,
   "urgent_leads": [
